@@ -1,0 +1,103 @@
+{
+    "project": "GridGuard AI",
+    "module": "historical_weather_risk_analyzer",
+    "interpretation": "Relative historical weather-risk indicators. These are not official meteorological warnings or grid-overload labels.",
+    "training_end_date": "2021-02-13",
+    "threshold_method": "Training-period P90/P95 for high-direction indicators; P10/P5 for pressure-decrease indicators.",
+    "temperature_method": "Month-specific training thresholds to reduce seasonal bias.",
+    "indicators": {
+        "heat": {
+            "description": "Unusually high recent temperature relative to the same calendar month.",
+            "direction": "high",
+            "features_used": [
+                "imd_temperature_mean_3d_c_spatial_median",
+                "imd_temperature_mean_7d_c_spatial_median",
+                "imd_temperature_mean_3d_c_spatial_max",
+                "imd_temperature_mean_7d_c_spatial_max",
+                "open_meteo_temperature_mean_3d_c_spatial_median",
+                "open_meteo_temperature_mean_7d_c_spatial_median",
+                "open_meteo_temperature_mean_3d_c_spatial_max",
+                "open_meteo_temperature_mean_7d_c_spatial_max"
+            ]
+        },
+        "rainfall": {
+            "description": "High accumulated rainfall across represented weather locations.",
+            "direction": "high",
+            "features_used": [
+                "imd_rainfall_3d_mm_spatial_max",
+                "imd_rainfall_7d_mm_spatial_max",
+                "imd_rainfall_14d_mm_spatial_max",
+                "open_meteo_rainfall_3d_mm_spatial_max",
+                "open_meteo_rainfall_7d_mm_spatial_max",
+                "open_meteo_rainfall_14d_mm_spatial_max"
+            ]
+        },
+        "humidity": {
+            "description": "Unusually high recent humidity in represented Open-Meteo locations.",
+            "direction": "high",
+            "features_used": [
+                "open_meteo_humidity_mean_7d_pct_spatial_max"
+            ]
+        },
+        "wind": {
+            "description": "Unusually high recent wind speed in represented Open-Meteo locations.",
+            "direction": "high",
+            "features_used": [
+                "open_meteo_wind_speed_max_7d_spatial_max",
+                "open_meteo_wind_speed_mean_7d_spatial_max"
+            ]
+        },
+        "pressure_drop": {
+            "description": "Unusually large recent pressure decrease.",
+            "direction": "low",
+            "features_used": [
+                "open_meteo_pressure_change_1d_hpa_spatial_median",
+                "open_meteo_pressure_change_1d_hpa_spatial_max"
+            ]
+        }
+    },
+    "unavailable_features": [],
+    "rows": 4136,
+    "date_min": "2013-01-01",
+    "date_max": "2024-04-28",
+    "weather_risk_distribution": {
+        "normal": 1953,
+        "high": 1434,
+        "elevated": 749
+    },
+    "indicator_distributions": {
+        "heat_risk": {
+            "normal": 3253,
+            "high": 544,
+            "elevated": 339
+        },
+        "rainfall_risk": {
+            "normal": 3200,
+            "high": 525,
+            "elevated": 411
+        },
+        "humidity_risk": {
+            "normal": 3704,
+            "elevated": 217,
+            "high": 215
+        },
+        "wind_risk": {
+            "normal": 3557,
+            "high": 319,
+            "elevated": 260
+        },
+        "pressure_drop_risk": {
+            "normal": 3632,
+            "high": 263,
+            "elevated": 241
+        }
+    },
+    "limitations": [
+        "Weather features are historical prior-only rolling summaries, not live forecasts.",
+        "Weather station coverage is spatially limited and not feeder-level.",
+        "A high weather-risk label is a relative statistical indicator, not an official warning.",
+        "Weather risk does not establish causation or grid stress.",
+        "Missing values remain unknown and are not treated as zero.",
+        "Thunderstorm probability and cloud cover are not used."
+    ]
+}

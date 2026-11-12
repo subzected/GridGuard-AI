@@ -1,0 +1,53 @@
+GridGuard-AI/
+│
+├── app.py
+│
+├── pages/
+│   ├── 1_Overview.py
+│   ├── 2_Live_Map.py
+│   ├── 3_Area_Analysis.py
+│   ├── 4_Weather_Monitoring.py
+│   ├── 5_Outage_Analytics.py
+│   └── 6_Model_Insights.py
+│
+├── src/
+│   ├── ingestion/
+│   │   ├── open_meteo.py
+│   │   ├── imd.py
+│   │   └── scheduler.py
+│   │
+│   ├── database/
+│   │   ├── connection.py
+│   │   ├── models.py
+│   │   └── repository.py
+│   │
+│   ├── preprocessing/
+│   │   └── weather_features.py
+│   │
+│   ├── prediction/
+│   │   ├── predict.py
+│   │   └── risk_engine.py
+│   │
+│   └── visualization/
+│       ├── maps.py
+│       └── charts.py
+│
+├── ml/
+│   ├── notebooks/
+│   ├── training/
+│   ├── evaluation/
+│   └── models/
+│
+├── data/
+│   ├── raw/
+│   ├── processed/
+│   └── geojson/
+│
+├── tests/
+│
+├── .env
+├── .env.example
+├── requirements.txt
+├── Dockerfile
+├── docker-compose.yml
+└── README.md

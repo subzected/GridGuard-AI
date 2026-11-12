@@ -1,0 +1,20 @@
+{
+    "energy": {
+        "p80": 152.7,
+        "p90": 164.3,
+        "p95": 172.3,
+        "training_min": 51.5,
+        "training_max": 198.5,
+        "training_mean": 133.2948741335279,
+        "training_observations": 2741
+    },
+    "peak_demand": {
+        "p80": 7859.0,
+        "p90": 8304.0,
+        "p95": 8596.0,
+        "training_min": 2966.0,
+        "training_max": 9989.0,
+        "training_mean": 7054.854797519153,
+        "training_observations": 2741
+    }
+}

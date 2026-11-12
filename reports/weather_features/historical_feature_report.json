@@ -1,0 +1,109 @@
+{
+  "policy": {
+    "rolling_windows": "Only observations strictly before each date",
+    "rolling_min_periods": "Full window required",
+    "rainfall_sources": "IMD and Open-Meteo remain separate",
+    "missing_values": "Preserved; not replaced with zero",
+    "duplicate_keys": "Raise error; never aggregate silently",
+    "wet_day_threshold_mm": 1.0
+  },
+  "imd": {
+    "source": "IMD",
+    "rows": 87660,
+    "locations": 15,
+    "date_min": "2010-01-01",
+    "date_max": "2025-12-31",
+    "feature_columns": [
+      "source",
+      "source_name",
+      "imd_rainfall_3d_mm",
+      "imd_wet_days_3d",
+      "imd_rainfall_7d_mm",
+      "imd_wet_days_7d",
+      "imd_rainfall_14d_mm",
+      "imd_wet_days_14d",
+      "imd_consecutive_wet_days",
+      "imd_temperature_mean_3d_c",
+      "imd_temperature_mean_7d_c",
+      "imd_temperature_change_3d_c",
+      "imd_humidity_mean_7d_pct",
+      "imd_wind_speed_mean_7d",
+      "imd_wind_speed_max_7d",
+      "imd_pressure_mean_7d_hpa",
+      "imd_pressure_change_1d_hpa"
+    ],
+    "missing_by_feature": {
+      "source": 0,
+      "source_name": 0,
+      "imd_rainfall_3d_mm": 45,
+      "imd_wet_days_3d": 45,
+      "imd_rainfall_7d_mm": 105,
+      "imd_wet_days_7d": 105,
+      "imd_rainfall_14d_mm": 210,
+      "imd_wet_days_14d": 210,
+      "imd_consecutive_wet_days": 15,
+      "imd_temperature_mean_3d_c": 45,
+      "imd_temperature_mean_7d_c": 105,
+      "imd_temperature_change_3d_c": 60,
+      "imd_humidity_mean_7d_pct": 87660,
+      "imd_wind_speed_mean_7d": 87660,
+      "imd_wind_speed_max_7d": 87660,
+      "imd_pressure_mean_7d_hpa": 87660,
+      "imd_pressure_change_1d_hpa": 87660
+    }
+  },
+  "open_meteo": {
+    "source": "OPEN_METEO",
+    "rows": 40908,
+    "locations": 7,
+    "date_min": "2010-01-01",
+    "date_max": "2025-12-31",
+    "feature_columns": [
+      "source",
+      "source_name",
+      "open_meteo_rainfall_3d_mm",
+      "open_meteo_wet_days_3d",
+      "open_meteo_rainfall_7d_mm",
+      "open_meteo_wet_days_7d",
+      "open_meteo_rainfall_14d_mm",
+      "open_meteo_wet_days_14d",
+      "open_meteo_consecutive_wet_days",
+      "open_meteo_temperature_mean_3d_c",
+      "open_meteo_temperature_mean_7d_c",
+      "open_meteo_temperature_change_3d_c",
+      "open_meteo_humidity_mean_7d_pct",
+      "open_meteo_wind_speed_mean_7d",
+      "open_meteo_wind_speed_max_7d",
+      "open_meteo_pressure_mean_7d_hpa",
+      "open_meteo_pressure_change_1d_hpa"
+    ],
+    "missing_by_feature": {
+      "source": 0,
+      "source_name": 0,
+      "open_meteo_rainfall_3d_mm": 21,
+      "open_meteo_wet_days_3d": 21,
+      "open_meteo_rainfall_7d_mm": 49,
+      "open_meteo_wet_days_7d": 49,
+      "open_meteo_rainfall_14d_mm": 98,
+      "open_meteo_wet_days_14d": 98,
+      "open_meteo_consecutive_wet_days": 7,
+      "open_meteo_temperature_mean_3d_c": 21,
+      "open_meteo_temperature_mean_7d_c": 49,
+      "open_meteo_temperature_change_3d_c": 28,
+      "open_meteo_humidity_mean_7d_pct": 49,
+      "open_meteo_wind_speed_mean_7d": 49,
+      "open_meteo_wind_speed_max_7d": 49,
+      "open_meteo_pressure_mean_7d_hpa": 49,
+      "open_meteo_pressure_change_1d_hpa": 14
+    }
+  },
+  "combined": {
+    "rows": 87660,
+    "locations": 15
+  },
+  "outputs": {
+    "imd": "data\\processed\\imd_historical_features.csv",
+    "open_meteo": "data\\processed\\openmeteo_historical_features.csv",
+    "combined": "data\\processed\\historical_weather_features.csv"
+  }
+}

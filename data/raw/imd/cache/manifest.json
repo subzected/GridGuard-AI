@@ -1,0 +1,485 @@
+{
+ "files": {
+  "archive/rain/2010.grd": {
+   "downloaded": "2026-11-09T09:43:18Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "rain": "2010"
+   },
+   "sha256": "1db12d8eb5a471d3623ff448bdd72a25a3afc577c0b979233083e0c183a143d0",
+   "size": 25425900,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/rainfall.php"
+  },
+  "archive/rain/2011.grd": {
+   "downloaded": "2026-11-09T09:43:06Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "rain": "2011"
+   },
+   "sha256": "1f656dc6498b8bcb8423ed8713b4b8469c0d66771b67bd2e985a3071240ac67b",
+   "size": 25425900,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/rainfall.php"
+  },
+  "archive/rain/2012.grd": {
+   "downloaded": "2026-11-09T09:43:00Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "rain": "2012"
+   },
+   "sha256": "3f007292029a212edde5ee1ee618242c8f2a64062d80e196d20f9576e8f77381",
+   "size": 25495560,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/rainfall.php"
+  },
+  "archive/rain/2013.grd": {
+   "downloaded": "2026-11-09T09:42:59Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "rain": "2013"
+   },
+   "sha256": "81bbab9f686bcd0c487e52a4fb54e4623efea198e74a742df5159a0977a8a02b",
+   "size": 25425900,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/rainfall.php"
+  },
+  "archive/rain/2014.grd": {
+   "downloaded": "2026-11-09T09:42:54Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "rain": "2014"
+   },
+   "sha256": "1e89531d9772acbdd2e83fa8bb8972ef09a52f0e4ec6adbeb408b1d98a167b22",
+   "size": 25425900,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/rainfall.php"
+  },
+  "archive/rain/2015.grd": {
+   "downloaded": "2026-11-09T09:42:24Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "rain": "2015"
+   },
+   "sha256": "72a9c97f58fb12d82d06ecdd821a9724865e48683c15a34d72f8804d244b9202",
+   "size": 25425900,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/rainfall.php"
+  },
+  "archive/rain/2016.grd": {
+   "downloaded": "2026-11-09T09:42:18Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "rain": "2016"
+   },
+   "sha256": "7d47dd937eb68d3e64e77f20d40597eeebb4d5329704857f604c4c4618dbf838",
+   "size": 25495560,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/rainfall.php"
+  },
+  "archive/rain/2017.grd": {
+   "downloaded": "2026-11-09T09:42:23Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "rain": "2017"
+   },
+   "sha256": "dc9109fc3c4c2dbcf8eea97114fa53a814ce677a8e64b567389f7d3da076c23a",
+   "size": 25425900,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/rainfall.php"
+  },
+  "archive/rain/2018.grd": {
+   "downloaded": "2026-11-09T09:42:06Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "rain": "2018"
+   },
+   "sha256": "78ae74184b0ece2a9a03bb16cca6f7361abcae1e772ce3e6d685110b2af18c33",
+   "size": 25425900,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/rainfall.php"
+  },
+  "archive/rain/2019.grd": {
+   "downloaded": "2026-11-09T09:41:54Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "rain": "2019"
+   },
+   "sha256": "dfb714184e16624cd43af8e932e3245c0d6cf1bacd9556e2cf44d962c9733f3f",
+   "size": 25425900,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/rainfall.php"
+  },
+  "archive/rain/2020.grd": {
+   "downloaded": "2026-11-09T09:41:50Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "rain": "2020"
+   },
+   "sha256": "e19532760221e68711132c98f05cc3ceb7b399e55dbe9bd35b02589bbf2e46ff",
+   "size": 25495560,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/rainfall.php"
+  },
+  "archive/rain/2021.grd": {
+   "downloaded": "2026-11-09T09:41:58Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "rain": "2021"
+   },
+   "sha256": "7f5128e82aa6d362b165898f7f5902d5edd12cb8265c71e2304f89053d5a2678",
+   "size": 25425900,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/rainfall.php"
+  },
+  "archive/rain/2022.grd": {
+   "downloaded": "2026-11-09T09:41:28Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "rain": "2022"
+   },
+   "sha256": "9cd1654631ed918f55fbe12e08ef7c0593019c4a3399e695f0b0398283fcbb3e",
+   "size": 25425900,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/rainfall.php"
+  },
+  "archive/rain/2023.grd": {
+   "downloaded": "2026-11-09T09:41:32Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "rain": "2023"
+   },
+   "sha256": "f308b916a4a2a57a66ce9d4987c60bb7756041434baed31f4342122dc3800ced",
+   "size": 25425900,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/rainfall.php"
+  },
+  "archive/rain/2024.grd": {
+   "downloaded": "2026-11-09T09:41:37Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "rain": "2024"
+   },
+   "sha256": "09d3c89a084f13f3ec534170ce9d98fafc6ff8c29b87d1c83cc2fcd82b495601",
+   "size": 25495560,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/rainfall.php"
+  },
+  "archive/rain/2025.grd": {
+   "downloaded": "2026-11-09T09:41:29Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "rain": "2025"
+   },
+   "sha256": "b4fa5ffb389496c0fa7d5a468d1cb47e4db0bcabcd11be4f273c0e6cfa7d611d",
+   "size": 25425900,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/rainfall.php"
+  },
+  "archive/tmax/2010.grd": {
+   "downloaded": "2026-11-09T09:43:33Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "maxtemp": "2010"
+   },
+   "sha256": "7d82ecb95f82a4606f115c6674b18a34e906a479805f021fc0b324a5b3bd3795",
+   "size": 1403060,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/maxtemp.php"
+  },
+  "archive/tmax/2011.grd": {
+   "downloaded": "2026-11-09T09:43:33Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "maxtemp": "2011"
+   },
+   "sha256": "642d337d4aa4ab0c4b167d04b923b3ec285a29d79920d5a8d3e5747953b7ccf2",
+   "size": 1403060,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/maxtemp.php"
+  },
+  "archive/tmax/2012.grd": {
+   "downloaded": "2026-11-09T09:43:33Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "maxtemp": "2012"
+   },
+   "sha256": "0f55a48c4ca1b6558e60bbb2047e0a7cfb5ff720c43c7cc39fca892b4754ef3c",
+   "size": 1406904,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/maxtemp.php"
+  },
+  "archive/tmax/2013.grd": {
+   "downloaded": "2026-11-09T09:43:33Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "maxtemp": "2013"
+   },
+   "sha256": "80c0e0162343cb6808db7bde56eab3222322a64d69bc493078fe05a9fb38af77",
+   "size": 1403060,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/maxtemp.php"
+  },
+  "archive/tmax/2014.grd": {
+   "downloaded": "2026-11-09T09:43:31Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "maxtemp": "2014"
+   },
+   "sha256": "68f6b0b7a6e4ed4e12ac13fd3e0884244b5d6b330fedee1ac43a4bd419ec9fd7",
+   "size": 1403060,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/maxtemp.php"
+  },
+  "archive/tmax/2015.grd": {
+   "downloaded": "2026-11-09T09:43:31Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "maxtemp": "2015"
+   },
+   "sha256": "1f59cb38f0412c31f00ed5b0283ce3c8d4aecb33f7c798037b23eda7a2da1fc9",
+   "size": 1403060,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/maxtemp.php"
+  },
+  "archive/tmax/2016.grd": {
+   "downloaded": "2026-11-09T09:43:31Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "maxtemp": "2016"
+   },
+   "sha256": "4cb547522de59e6af4a93b5a50810de406004b2553921337270f499db4e0c12e",
+   "size": 1406904,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/maxtemp.php"
+  },
+  "archive/tmax/2017.grd": {
+   "downloaded": "2026-11-09T09:43:31Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "maxtemp": "2017"
+   },
+   "sha256": "ab6f1602d4bf3d2fb72af1c95123135715d03363ffcff2edba290460be348aa2",
+   "size": 1403060,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/maxtemp.php"
+  },
+  "archive/tmax/2018.grd": {
+   "downloaded": "2026-11-09T09:43:30Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "maxtemp": "2018"
+   },
+   "sha256": "d3177ec1a2f39235834a7ab5fa5120866bb9106f1fc2c06d8eba0d5bcdf7e555",
+   "size": 1403060,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/maxtemp.php"
+  },
+  "archive/tmax/2019.grd": {
+   "downloaded": "2026-11-09T09:43:30Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "maxtemp": "2019"
+   },
+   "sha256": "562086409f4db9ca32b6d554e2cb209926c4caf9892d7b5385195b254e0576ab",
+   "size": 1403060,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/maxtemp.php"
+  },
+  "archive/tmax/2020.grd": {
+   "downloaded": "2026-11-09T09:43:30Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "maxtemp": "2020"
+   },
+   "sha256": "f77b8b50582c400eca0510a1738050ab10bf628b648f5a7a9e9d3c7842637ba8",
+   "size": 1406904,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/maxtemp.php"
+  },
+  "archive/tmax/2021.grd": {
+   "downloaded": "2026-11-09T09:43:29Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "maxtemp": "2021"
+   },
+   "sha256": "d869f0277dcc3b2038421f3a20a2ebf82cd7889dd553742577eda8f7603036dc",
+   "size": 1403060,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/maxtemp.php"
+  },
+  "archive/tmax/2022.grd": {
+   "downloaded": "2026-11-09T09:43:28Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "maxtemp": "2022"
+   },
+   "sha256": "b8340004e3c13e7b1b0a9ff14d03771bbfe048b64db92fb7e23260c2f52ca214",
+   "size": 1403060,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/maxtemp.php"
+  },
+  "archive/tmax/2023.grd": {
+   "downloaded": "2026-11-09T09:43:29Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "maxtemp": "2023"
+   },
+   "sha256": "3279af28be8f222970dc0a48cb9530228ca55ae136a26020291de59d618d982b",
+   "size": 1403060,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/maxtemp.php"
+  },
+  "archive/tmax/2024.grd": {
+   "downloaded": "2026-11-09T09:43:28Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "maxtemp": "2024"
+   },
+   "sha256": "de50b8732a3e0fd7dea29a9c5604ca78b5c02e78b8164fb20ad2f6e00ed4c017",
+   "size": 1406904,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/maxtemp.php"
+  },
+  "archive/tmax/2025.grd": {
+   "downloaded": "2026-11-09T09:43:29Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "maxtemp": "2025"
+   },
+   "sha256": "673775eafe685d180c5d7a19018287599697a3f6800332470ab27ca512bd4b88",
+   "size": 1403060,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/maxtemp.php"
+  },
+  "archive/tmin/2010.grd": {
+   "downloaded": "2026-11-09T09:43:27Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "mintemp": "2010"
+   },
+   "sha256": "55b3e996c652fa5ebd17a920a538dfa3216fcc0c5aaa48e65ba190831bb1de95",
+   "size": 1403060,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/mintemp.php"
+  },
+  "archive/tmin/2011.grd": {
+   "downloaded": "2026-11-09T09:43:27Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "mintemp": "2011"
+   },
+   "sha256": "72cfc0ffbe88da7c56834d7ad096c8d336620505623e46093d291c9900ebba38",
+   "size": 1403060,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/mintemp.php"
+  },
+  "archive/tmin/2012.grd": {
+   "downloaded": "2026-11-09T09:43:26Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "mintemp": "2012"
+   },
+   "sha256": "2d70c8debb4833463e272a60e793538d81e295dcddddb2fc009cf956a1a24668",
+   "size": 1406904,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/mintemp.php"
+  },
+  "archive/tmin/2013.grd": {
+   "downloaded": "2026-11-09T09:43:26Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "mintemp": "2013"
+   },
+   "sha256": "e10e2fcc9a8ca6a6de8b8ccb3b20837a076bd4b45fd106175136e3ccbc9f9977",
+   "size": 1403060,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/mintemp.php"
+  },
+  "archive/tmin/2014.grd": {
+   "downloaded": "2026-11-09T09:43:25Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "mintemp": "2014"
+   },
+   "sha256": "6fde6cdaf1c53919d32d11326340440cd16feb735b1a34ba0b050c3e67e744e1",
+   "size": 1403060,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/mintemp.php"
+  },
+  "archive/tmin/2015.grd": {
+   "downloaded": "2026-11-09T09:43:24Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "mintemp": "2015"
+   },
+   "sha256": "4aab466ad7c3df41d9d78b8f77a305555590959e2963de9e2d37d1dd1ea11e5c",
+   "size": 1403060,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/mintemp.php"
+  },
+  "archive/tmin/2016.grd": {
+   "downloaded": "2026-11-09T09:43:24Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "mintemp": "2016"
+   },
+   "sha256": "015c455543de61b4ea6aefcecdfd2218c99b8c60d8c3301a024aa63313d7ab7b",
+   "size": 1406904,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/mintemp.php"
+  },
+  "archive/tmin/2017.grd": {
+   "downloaded": "2026-11-09T09:43:23Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "mintemp": "2017"
+   },
+   "sha256": "8eba57d8306167936170d952b618681b0bf2d69d2a18b26f92e5ddb371ccf182",
+   "size": 1403060,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/mintemp.php"
+  },
+  "archive/tmin/2018.grd": {
+   "downloaded": "2026-11-09T09:43:25Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "mintemp": "2018"
+   },
+   "sha256": "aad48cb4bd39b8f9495b8cce50d228893bac7ef9b55b6f8c7526a82ebe0a2ea9",
+   "size": 1403060,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/mintemp.php"
+  },
+  "archive/tmin/2019.grd": {
+   "downloaded": "2026-11-09T09:43:22Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "mintemp": "2019"
+   },
+   "sha256": "5c188d132b748c454fda878216fd5d2e2c06e5fa313b7fb2231050c90306c147",
+   "size": 1403060,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/mintemp.php"
+  },
+  "archive/tmin/2020.grd": {
+   "downloaded": "2026-11-09T09:43:23Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "mintemp": "2020"
+   },
+   "sha256": "2f3f6530b06eb24ae54612528011b97e1f6b38cacbe742fc51c1b3a8f3cf6be4",
+   "size": 1406904,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/mintemp.php"
+  },
+  "archive/tmin/2021.grd": {
+   "downloaded": "2026-11-09T09:43:23Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "mintemp": "2021"
+   },
+   "sha256": "b1f1a4c0246783c56b3f1117353aa167458e6f140c969ee7453b76cec830cd4d",
+   "size": 1403060,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/mintemp.php"
+  },
+  "archive/tmin/2022.grd": {
+   "downloaded": "2026-11-09T09:43:21Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "mintemp": "2022"
+   },
+   "sha256": "59c9e294e2b8c59e58bd9ef241bc47604f83f54a2807398bb48137a92b5e8225",
+   "size": 1403060,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/mintemp.php"
+  },
+  "archive/tmin/2023.grd": {
+   "downloaded": "2026-11-09T09:43:21Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "mintemp": "2023"
+   },
+   "sha256": "d52d47893ff1286e433d21b91160cb39a5b8f39398c625a997eb48132891a45c",
+   "size": 1403060,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/mintemp.php"
+  },
+  "archive/tmin/2024.grd": {
+   "downloaded": "2026-11-09T09:43:22Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "mintemp": "2024"
+   },
+   "sha256": "31bcc5cbaca7ccf8da69ec5e6801ad036214dce850c1c50fcda9f1af1e77addd",
+   "size": 1406904,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/mintemp.php"
+  },
+  "archive/tmin/2025.grd": {
+   "downloaded": "2026-11-09T09:43:21Z",
+   "imdlib_version": "0.4.0",
+   "post_data": {
+    "mintemp": "2025"
+   },
+   "sha256": "371bc1866e4c3d9455902ed22ef6e9c66ceaf2dcad3d274f45768d2b81249258",
+   "size": 1403060,
+   "url": "https://imdpune.gov.in/cmpg/Griddata/mintemp.php"
+  }
+ },
+ "version": 1
+}

@@ -1,0 +1,337 @@
+{
+  "dataset": "F:\\powergrid-ai\\data\\processed\\west_bengal_demand_weather_dataset.csv",
+  "comparison_policy": "All models are re-evaluated on the same chronological test rows. No model is fitted or selected in this script.",
+  "split": {
+    "train": {
+      "rows": 2658,
+      "start": "2013-01-02",
+      "end": "2021-02-13"
+    },
+    "validation": {
+      "rows": 570,
+      "start": "2021-02-14",
+      "end": "2022-09-30"
+    },
+    "test": {
+      "rows": 570,
+      "start": "2022-10-01",
+      "end": "2024-04-28"
+    }
+  },
+  "high_demand_quantile": 0.8,
+  "top_test_quantile": 0.9,
+  "targets": {
+    "energy_MU": {
+      "unit": "MU",
+      "test_rows_evaluated": 567,
+      "test_date_range": {
+        "start": "2022-10-01",
+        "end": "2024-04-28"
+      },
+      "training_p80_threshold": 152.7,
+      "test_top10_threshold_retrospective": 221.3,
+      "model_bundles": {
+        "demand_change": "F:\\powergrid-ai\\ml\\models\\demand_change\\energy_MU_lightgbm_delta.joblib",
+        "demand_change_selected_model": null,
+        "extreme_demand": "F:\\powergrid-ai\\ml\\models\\extreme_demand\\energy_MU_extratrees_weighted_delta_extreme_delta.joblib",
+        "extreme_demand_selected_model": "ExtraTrees_weighted_delta",
+        "demand_change_feature_count": 96,
+        "extreme_demand_feature_count": 97,
+        "feature_lists_identical": false
+      },
+      "metrics": {
+        "persistence": {
+          "overall": {
+            "n": 567,
+            "mae": 7.026807760141093,
+            "rmse": 9.595326978463692,
+            "r2": 0.9293597691925113,
+            "mean_error": -0.15026455026455027,
+            "underprediction_rate_percent": 53.43915343915344,
+            "overprediction_rate_percent": 45.5026455026455,
+            "mape_percent": 4.147031204677652
+          },
+          "high_demand_train_p80": {
+            "n": 325,
+            "mae": 8.483384615384617,
+            "rmse": 11.024929792206247,
+            "r2": 0.8277628540727042,
+            "mean_error": -0.8864615384615385,
+            "underprediction_rate_percent": 58.769230769230774,
+            "overprediction_rate_percent": 40.92307692307692,
+            "mape_percent": 4.426188317363416
+          },
+          "top_10_percent_test_stress_group": {
+            "n": 57,
+            "mae": 6.885964912280698,
+            "rmse": 8.20822223631291,
+            "r2": 0.36151896594238375,
+            "mean_error": -3.9315789473684206,
+            "underprediction_rate_percent": 70.17543859649122,
+            "overprediction_rate_percent": 29.82456140350877,
+            "mape_percent": 2.9587405819447348
+          }
+        },
+        "trend_adjusted_persistence": {
+          "overall": {
+            "n": 567,
+            "mae": 7.982745443856555,
+            "rmse": 10.840252007681604,
+            "r2": 0.9098405384761926,
+            "mean_error": -0.05376249265138109,
+            "underprediction_rate_percent": 53.96825396825397,
+            "overprediction_rate_percent": 46.03174603174603,
+            "mape_percent": 4.720627987331869
+          },
+          "high_demand_train_p80": {
+            "n": 325,
+            "mae": 9.588564102564101,
+            "rmse": 12.46495590208909,
+            "r2": 0.7798307575347418,
+            "mean_error": -0.2698974358974359,
+            "underprediction_rate_percent": 55.07692307692308,
+            "overprediction_rate_percent": 44.92307692307692,
+            "mape_percent": 5.010889845884827
+          },
+          "top_10_percent_test_stress_group": {
+            "n": 57,
+            "mae": 7.2652046783625694,
+            "rmse": 9.068640942170532,
+            "r2": 0.22064701607418324,
+            "mean_error": -0.08099415204678276,
+            "underprediction_rate_percent": 54.385964912280706,
+            "overprediction_rate_percent": 45.614035087719294,
+            "mape_percent": 3.1239162315023656
+          }
+        },
+        "demand_change_model": {
+          "overall": {
+            "n": 567,
+            "mae": 5.778131599338353,
+            "rmse": 7.948525650798234,
+            "r2": 0.9515263511614402,
+            "mean_error": -1.758113354176399,
+            "underprediction_rate_percent": 65.60846560846561,
+            "overprediction_rate_percent": 34.39153439153439,
+            "mape_percent": 3.295049275459033
+          },
+          "high_demand_train_p80": {
+            "n": 325,
+            "mae": 7.3560515254246,
+            "rmse": 9.292252113178098,
+            "r2": 0.8776462952060798,
+            "mean_error": -3.0910286110202905,
+            "underprediction_rate_percent": 69.84615384615384,
+            "overprediction_rate_percent": 30.153846153846153,
+            "mape_percent": 3.750649429645027
+          },
+          "top_10_percent_test_stress_group": {
+            "n": 57,
+            "mae": 9.842017372462902,
+            "rmse": 11.1210960064479,
+            "r2": -0.17204684004699877,
+            "mean_error": -9.824668367680927,
+            "underprediction_rate_percent": 98.24561403508771,
+            "overprediction_rate_percent": 1.7543859649122806,
+            "mape_percent": 4.1936574524329595
+          }
+        },
+        "extreme_demand_model": {
+          "overall": {
+            "n": 567,
+            "mae": 6.00016921658478,
+            "rmse": 8.36392555555684,
+            "r2": 0.9463273708782107,
+            "mean_error": -1.175650877578774,
+            "underprediction_rate_percent": 60.670194003527335,
+            "overprediction_rate_percent": 39.32980599647266,
+            "mape_percent": 3.4360288396079213
+          },
+          "high_demand_train_p80": {
+            "n": 325,
+            "mae": 7.6357811727324645,
+            "rmse": 9.677326883542523,
+            "r2": 0.8672953999736621,
+            "mean_error": -2.437011837895911,
+            "underprediction_rate_percent": 66.46153846153847,
+            "overprediction_rate_percent": 33.53846153846154,
+            "mape_percent": 3.9235001929411153
+          },
+          "top_10_percent_test_stress_group": {
+            "n": 57,
+            "mae": 8.638556423104324,
+            "rmse": 9.803682702996412,
+            "r2": 0.08918896843326407,
+            "mean_error": -8.14214149284262,
+            "underprediction_rate_percent": 92.98245614035088,
+            "overprediction_rate_percent": 7.017543859649122,
+            "mape_percent": 3.6685640603206013
+          }
+        }
+      },
+      "monthly_table": "tables/energy_MU_monthly_comparison.csv",
+      "high_demand_table": "tables/energy_MU_high_demand_errors.csv",
+      "top_10pct_table": "tables/energy_MU_top_10pct_test_errors.csv"
+    },
+    "peak_demand_MW": {
+      "unit": "MW",
+      "test_rows_evaluated": 567,
+      "test_date_range": {
+        "start": "2022-10-01",
+        "end": "2024-04-28"
+      },
+      "training_p80_threshold": 7860.6,
+      "test_top10_threshold_retrospective": 10467.0,
+      "model_bundles": {
+        "demand_change": "F:\\powergrid-ai\\ml\\models\\demand_change\\peak_demand_MW_xgboost_delta.joblib",
+        "demand_change_selected_model": null,
+        "extreme_demand": "F:\\powergrid-ai\\ml\\models\\extreme_demand\\peak_demand_MW_gradientboosting_quantile_delta_q75_extreme_delta.joblib",
+        "extreme_demand_selected_model": "GradientBoosting_quantile_delta_q75",
+        "demand_change_feature_count": 96,
+        "extreme_demand_feature_count": 97,
+        "feature_lists_identical": false
+      },
+      "metrics": {
+        "persistence": {
+          "overall": {
+            "n": 567,
+            "mae": 355.320987654321,
+            "rmse": 484.7518883904012,
+            "r2": 0.9008355062337565,
+            "mean_error": -5.553791887125221,
+            "underprediction_rate_percent": 53.79188712522046,
+            "overprediction_rate_percent": 46.20811287477954,
+            "mape_percent": 4.449603395583584
+          },
+          "high_demand_train_p80": {
+            "n": 280,
+            "mae": 382.125,
+            "rmse": 519.0624962372065,
+            "r2": 0.7776921289955392,
+            "mean_error": -63.71071428571429,
+            "underprediction_rate_percent": 59.285714285714285,
+            "overprediction_rate_percent": 40.714285714285715,
+            "mape_percent": 4.098127461078538
+          },
+          "top_10_percent_test_stress_group": {
+            "n": 57,
+            "mae": 304.70175438596493,
+            "rmse": 382.5703925595365,
+            "r2": 0.4244890038998652,
+            "mean_error": -155.19298245614036,
+            "underprediction_rate_percent": 64.91228070175438,
+            "overprediction_rate_percent": 35.08771929824561,
+            "mape_percent": 2.743955349726716
+          }
+        },
+        "trend_adjusted_persistence": {
+          "overall": {
+            "n": 567,
+            "mae": 403.28630217519105,
+            "rmse": 548.3006434703698,
+            "r2": 0.8731312411800807,
+            "mean_error": -0.9611992945326214,
+            "underprediction_rate_percent": 49.382716049382715,
+            "overprediction_rate_percent": 50.44091710758377,
+            "mape_percent": 5.046837268399113
+          },
+          "high_demand_train_p80": {
+            "n": 280,
+            "mae": 434.2672619047618,
+            "rmse": 585.0326033005367,
+            "r2": 0.7175928573449173,
+            "mean_error": -32.293452380952374,
+            "underprediction_rate_percent": 50.357142857142854,
+            "overprediction_rate_percent": 49.642857142857146,
+            "mape_percent": 4.6569441724475285
+          },
+          "top_10_percent_test_stress_group": {
+            "n": 57,
+            "mae": 353.89473684210526,
+            "rmse": 431.5255668147772,
+            "r2": 0.2677759720486155,
+            "mean_error": 21.865497076023402,
+            "underprediction_rate_percent": 40.35087719298245,
+            "overprediction_rate_percent": 59.64912280701754,
+            "mape_percent": 3.183928669794547
+          }
+        },
+        "demand_change_model": {
+          "overall": {
+            "n": 567,
+            "mae": 287.56094186241876,
+            "rmse": 399.3062943021749,
+            "r2": 0.9327132592854528,
+            "mean_error": -45.45693724911259,
+            "underprediction_rate_percent": 61.022927689594354,
+            "overprediction_rate_percent": 38.97707231040564,
+            "mape_percent": 3.4742378988517832
+          },
+          "high_demand_train_p80": {
+            "n": 280,
+            "mae": 350.61199125519823,
+            "rmse": 462.8139425720066,
+            "r2": 0.8232626229583982,
+            "mean_error": -127.7757558375597,
+            "underprediction_rate_percent": 66.78571428571428,
+            "overprediction_rate_percent": 33.214285714285715,
+            "mape_percent": 3.6936306411766227
+          },
+          "top_10_percent_test_stress_group": {
+            "n": 57,
+            "mae": 383.302536111129,
+            "rmse": 458.73386198744305,
+            "r2": 0.17252951601151922,
+            "mean_error": -342.4147851174338,
+            "underprediction_rate_percent": 84.21052631578947,
+            "overprediction_rate_percent": 15.789473684210526,
+            "mape_percent": 3.424152729769985
+          }
+        },
+        "extreme_demand_model": {
+          "overall": {
+            "n": 567,
+            "mae": 315.06727034396715,
+            "rmse": 458.45432178836086,
+            "r2": 0.9113029200841616,
+            "mean_error": 173.43407085093227,
+            "underprediction_rate_percent": 31.746031746031743,
+            "overprediction_rate_percent": 68.25396825396825,
+            "mape_percent": 3.92628595816785
+          },
+          "high_demand_train_p80": {
+            "n": 280,
+            "mae": 345.4688188415111,
+            "rmse": 488.06205006390127,
+            "r2": 0.8034533630268528,
+            "mean_error": 118.9046770727027,
+            "underprediction_rate_percent": 40.35714285714286,
+            "overprediction_rate_percent": 59.64285714285714,
+            "mape_percent": 3.7064417804827854
+          },
+          "top_10_percent_test_stress_group": {
+            "n": 57,
+            "mae": 266.2030044411501,
+            "rmse": 315.20702004623183,
+            "r2": 0.609318654101304,
+            "mean_error": -108.08378563441354,
+            "underprediction_rate_percent": 66.66666666666666,
+            "overprediction_rate_percent": 33.33333333333333,
+            "mape_percent": 2.3820458947072276
+          }
+        }
+      },
+      "monthly_table": "tables/peak_demand_MW_monthly_comparison.csv",
+      "high_demand_table": "tables/peak_demand_MW_high_demand_errors.csv",
+      "top_10pct_table": "tables/peak_demand_MW_top_10pct_test_errors.csv"
+    }
+  },
+  "caveats": [
+    "The high-demand threshold is calculated from training actual demand only.",
+    "Actual demand is used retrospectively to form high-demand evaluation groups.",
+    "The top 10% test group is a descriptive stress test, not a deployable forecast-time label.",
+    "The script does not fit models or tune hyperparameters.",
+    "Historical weather features are prior-day observations, not archived operational forecasts.",
+    "Latest saved bundle per target is loaded when multiple bundles exist; bundle paths are recorded."
+  ]
+}

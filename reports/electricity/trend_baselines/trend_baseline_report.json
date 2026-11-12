@@ -1,0 +1,458 @@
+{
+  "project": "GridGuard AI",
+  "dataset": "F:\\powergrid-ai\\data\\processed\\west_bengal_demand_weather_dataset.csv",
+  "method": "deterministic trend-aware daily demand baselines",
+  "split_method": "chronological 70/15/15 over rows with valid targets",
+  "split_dates": {
+    "train": {
+      "rows": 2725,
+      "start": "2013-01-01",
+      "end": "2021-01-27"
+    },
+    "validation": {
+      "rows": 584,
+      "start": "2021-01-28",
+      "end": "2022-09-18"
+    },
+    "test": {
+      "rows": 585,
+      "start": "2022-09-19",
+      "end": "2024-04-28"
+    }
+  },
+  "baseline_definitions": {
+    "persistence_lag_1d": "Demand on the previous calendar day.",
+    "seasonal_persistence_lag_7d": "Demand seven calendar days before the target date.",
+    "rolling_mean_7d": "Mean demand over the previous seven calendar days.",
+    "rolling_mean_30d": "Mean demand over the previous thirty calendar days; used because this is the available engineered long-window feature.",
+    "trend_adjusted_persistence_7d": "lag_1 + (lag_1 - lag_7) / 6; extrapolates the average daily change between D-7 and D-1 by one day."
+  },
+  "targets": {
+    "energy_MU": {
+      "train": {
+        "target": "energy_MU",
+        "split": "train",
+        "individual_method_metrics": {
+          "persistence_lag_1d": {
+            "MAE": 5.737495270525918,
+            "RMSE": 7.891854040512035,
+            "R2": 0.873916758547102,
+            "rows_evaluated": 2643
+          },
+          "seasonal_persistence_lag_7d": {
+            "MAE": 10.347975318164286,
+            "RMSE": 14.505072652864133,
+            "R2": 0.5736207402504688,
+            "rows_evaluated": 2593
+          },
+          "rolling_mean_7d": {
+            "MAE": 7.464614994934144,
+            "RMSE": 10.375097406103425,
+            "R2": 0.7822948703620516,
+            "rows_evaluated": 2256
+          },
+          "rolling_mean_30d": {
+            "MAE": 9.443838174273859,
+            "RMSE": 12.255265708050533,
+            "R2": 0.7104854316279414,
+            "rows_evaluated": 1446
+          },
+          "trend_adjusted_persistence_7d": {
+            "MAE": 6.491006339144216,
+            "RMSE": 8.90395926980669,
+            "R2": 0.8394183347309708,
+            "rows_evaluated": 2524
+          }
+        },
+        "common_row_metrics": {
+          "persistence_lag_1d": {
+            "MAE": 5.803319502074689,
+            "RMSE": 7.979386478632325,
+            "R2": 0.8772662624184641,
+            "rows_evaluated": 1446
+          },
+          "seasonal_persistence_lag_7d": {
+            "MAE": 10.380567081604426,
+            "RMSE": 14.558542334660322,
+            "R2": 0.5914353889669275,
+            "rows_evaluated": 1446
+          },
+          "rolling_mean_7d": {
+            "MAE": 7.589804386484885,
+            "RMSE": 10.442016151168671,
+            "R2": 0.7898188905374612,
+            "rows_evaluated": 1446
+          },
+          "rolling_mean_30d": {
+            "MAE": 9.443838174273859,
+            "RMSE": 12.255265708050533,
+            "R2": 0.7104854316279414,
+            "rows_evaluated": 1446
+          },
+          "trend_adjusted_persistence_7d": {
+            "MAE": 6.566539880129092,
+            "RMSE": 8.984131086535427,
+            "R2": 0.8444116342882655,
+            "rows_evaluated": 1446
+          }
+        },
+        "common_rows": 1446
+      },
+      "validation": {
+        "target": "energy_MU",
+        "split": "validation",
+        "individual_method_metrics": {
+          "persistence_lag_1d": {
+            "MAE": 6.333333333333333,
+            "RMSE": 8.654609682759096,
+            "R2": 0.9035303174503027,
+            "rows_evaluated": 573
+          },
+          "seasonal_persistence_lag_7d": {
+            "MAE": 11.42,
+            "RMSE": 16.250039676064922,
+            "R2": 0.6606159481031075,
+            "rows_evaluated": 570
+          },
+          "rolling_mean_7d": {
+            "MAE": 8.390261015997755,
+            "RMSE": 11.75122959084181,
+            "R2": 0.8274021646169265,
+            "rows_evaluated": 509
+          },
+          "rolling_mean_30d": {
+            "MAE": 11.330974529346621,
+            "RMSE": 14.876982388353783,
+            "R2": 0.7865480958835385,
+            "rows_evaluated": 301
+          },
+          "trend_adjusted_persistence_7d": {
+            "MAE": 7.133898809523808,
+            "RMSE": 9.77187084551513,
+            "R2": 0.8783439942929694,
+            "rows_evaluated": 560
+          }
+        },
+        "common_row_metrics": {
+          "persistence_lag_1d": {
+            "MAE": 6.205980066445183,
+            "RMSE": 8.67779079928447,
+            "R2": 0.9273745748464205,
+            "rows_evaluated": 301
+          },
+          "seasonal_persistence_lag_7d": {
+            "MAE": 9.358471760797341,
+            "RMSE": 13.52058723095145,
+            "R2": 0.8236962928056926,
+            "rows_evaluated": 301
+          },
+          "rolling_mean_7d": {
+            "MAE": 7.486616041765542,
+            "RMSE": 10.534646531528253,
+            "R2": 0.8929688301709012,
+            "rows_evaluated": 301
+          },
+          "rolling_mean_30d": {
+            "MAE": 11.330974529346621,
+            "RMSE": 14.876982388353783,
+            "R2": 0.7865480958835385,
+            "rows_evaluated": 301
+          },
+          "trend_adjusted_persistence_7d": {
+            "MAE": 6.950664451827241,
+            "RMSE": 9.694549802112169,
+            "R2": 0.9093588039564334,
+            "rows_evaluated": 301
+          }
+        },
+        "common_rows": 301
+      },
+      "test": {
+        "target": "energy_MU",
+        "split": "test",
+        "individual_method_metrics": {
+          "persistence_lag_1d": {
+            "MAE": 6.951890034364261,
+            "RMSE": 9.517466309289127,
+            "R2": 0.929516657665749,
+            "rows_evaluated": 582
+          },
+          "seasonal_persistence_lag_7d": {
+            "MAE": 15.426288659793816,
+            "RMSE": 22.01876308594676,
+            "R2": 0.6230523082158276,
+            "rows_evaluated": 582
+          },
+          "rolling_mean_7d": {
+            "MAE": 10.817543859649122,
+            "RMSE": 15.061450188340704,
+            "R2": 0.8222168218882189,
+            "rows_evaluated": 570
+          },
+          "rolling_mean_30d": {
+            "MAE": 14.306952926208654,
+            "RMSE": 18.4809020346065,
+            "R2": 0.7153300035277051,
+            "rows_evaluated": 524
+          },
+          "trend_adjusted_persistence_7d": {
+            "MAE": 7.929073114565341,
+            "RMSE": 10.773694348976042,
+            "R2": 0.9095198489306522,
+            "rows_evaluated": 579
+          }
+        },
+        "common_row_metrics": {
+          "persistence_lag_1d": {
+            "MAE": 6.977862595419848,
+            "RMSE": 9.473440172518643,
+            "R2": 0.9251984151138839,
+            "rows_evaluated": 524
+          },
+          "seasonal_persistence_lag_7d": {
+            "MAE": 15.047137404580154,
+            "RMSE": 21.176896257820783,
+            "R2": 0.6262166221747986,
+            "rows_evaluated": 524
+          },
+          "rolling_mean_7d": {
+            "MAE": 10.680970556161393,
+            "RMSE": 14.683923688622382,
+            "R2": 0.820286954553025,
+            "rows_evaluated": 524
+          },
+          "rolling_mean_30d": {
+            "MAE": 14.306952926208654,
+            "RMSE": 18.4809020346065,
+            "R2": 0.7153300035277051,
+            "rows_evaluated": 524
+          },
+          "trend_adjusted_persistence_7d": {
+            "MAE": 7.958047073791348,
+            "RMSE": 10.705675455537008,
+            "R2": 0.9044735775652937,
+            "rows_evaluated": 524
+          }
+        },
+        "common_rows": 524
+      }
+    },
+    "peak_demand_MW": {
+      "train": {
+        "target": "peak_demand_MW",
+        "split": "train",
+        "individual_method_metrics": {
+          "persistence_lag_1d": {
+            "MAE": 313.5788876276958,
+            "RMSE": 420.5791014213647,
+            "R2": 0.7671318863299073,
+            "rows_evaluated": 2643
+          },
+          "seasonal_persistence_lag_7d": {
+            "MAE": 429.75433860393366,
+            "RMSE": 596.3463454642393,
+            "R2": 0.5340194025324849,
+            "rows_evaluated": 2593
+          },
+          "rolling_mean_7d": {
+            "MAE": 331.0025962512665,
+            "RMSE": 446.6650022456152,
+            "R2": 0.7436363214770281,
+            "rows_evaluated": 2256
+          },
+          "rolling_mean_30d": {
+            "MAE": 379.7296449976948,
+            "RMSE": 492.29792766995865,
+            "R2": 0.7070824863380316,
+            "rows_evaluated": 1446
+          },
+          "trend_adjusted_persistence_7d": {
+            "MAE": 354.93225039619654,
+            "RMSE": 471.230239702048,
+            "R2": 0.7098340369726437,
+            "rows_evaluated": 2524
+          }
+        },
+        "common_row_metrics": {
+          "persistence_lag_1d": {
+            "MAE": 307.58160442600274,
+            "RMSE": 405.5676698835495,
+            "R2": 0.8012001835394161,
+            "rows_evaluated": 1446
+          },
+          "seasonal_persistence_lag_7d": {
+            "MAE": 416.43499308437066,
+            "RMSE": 577.0318559611022,
+            "R2": 0.5975713392609463,
+            "rows_evaluated": 1446
+          },
+          "rolling_mean_7d": {
+            "MAE": 328.334914048607,
+            "RMSE": 433.66189242723885,
+            "R2": 0.7727039726691063,
+            "rows_evaluated": 1446
+          },
+          "rolling_mean_30d": {
+            "MAE": 379.7296449976948,
+            "RMSE": 492.29792766995865,
+            "R2": 0.7070824863380316,
+            "rows_evaluated": 1446
+          },
+          "trend_adjusted_persistence_7d": {
+            "MAE": 347.22222222222223,
+            "RMSE": 454.9253506349987,
+            "R2": 0.7498678011721822,
+            "rows_evaluated": 1446
+          }
+        },
+        "common_rows": 1446
+      },
+      "validation": {
+        "target": "peak_demand_MW",
+        "split": "validation",
+        "individual_method_metrics": {
+          "persistence_lag_1d": {
+            "MAE": 308.94938917975566,
+            "RMSE": 420.25264569412826,
+            "R2": 0.8658383587044847,
+            "rows_evaluated": 573
+          },
+          "seasonal_persistence_lag_7d": {
+            "MAE": 505.07719298245615,
+            "RMSE": 676.481547575783,
+            "R2": 0.6529907680408272,
+            "rows_evaluated": 570
+          },
+          "rolling_mean_7d": {
+            "MAE": 374.65057535784456,
+            "RMSE": 497.28432883083474,
+            "R2": 0.8168589492777112,
+            "rows_evaluated": 509
+          },
+          "rolling_mean_30d": {
+            "MAE": 489.4386489479513,
+            "RMSE": 640.6954823845921,
+            "R2": 0.7689114706101868,
+            "rows_evaluated": 301
+          },
+          "trend_adjusted_persistence_7d": {
+            "MAE": 346.8803571428571,
+            "RMSE": 469.33872648501045,
+            "R2": 0.8343369027593077,
+            "rows_evaluated": 560
+          }
+        },
+        "common_row_metrics": {
+          "persistence_lag_1d": {
+            "MAE": 317.03654485049833,
+            "RMSE": 437.58424722780745,
+            "R2": 0.8922050479050505,
+            "rows_evaluated": 301
+          },
+          "seasonal_persistence_lag_7d": {
+            "MAE": 433.24584717607974,
+            "RMSE": 599.6920444467789,
+            "R2": 0.7975435393092467,
+            "rows_evaluated": 301
+          },
+          "rolling_mean_7d": {
+            "MAE": 352.98196487897485,
+            "RMSE": 482.57005764232565,
+            "R2": 0.8689020778951224,
+            "rows_evaluated": 301
+          },
+          "rolling_mean_30d": {
+            "MAE": 489.4386489479513,
+            "RMSE": 640.6954823845921,
+            "R2": 0.7689114706101868,
+            "rows_evaluated": 301
+          },
+          "trend_adjusted_persistence_7d": {
+            "MAE": 360.9119601328904,
+            "RMSE": 490.01786180822404,
+            "R2": 0.8648242190849847,
+            "rows_evaluated": 301
+          }
+        },
+        "common_rows": 301
+      },
+      "test": {
+        "target": "peak_demand_MW",
+        "split": "test",
+        "individual_method_metrics": {
+          "persistence_lag_1d": {
+            "MAE": 352.1529209621993,
+            "RMSE": 480.6353702200133,
+            "R2": 0.9008474092374144,
+            "rows_evaluated": 582
+          },
+          "seasonal_persistence_lag_7d": {
+            "MAE": 693.2697594501718,
+            "RMSE": 987.7673416882348,
+            "R2": 0.5820826410204029,
+            "rows_evaluated": 582
+          },
+          "rolling_mean_7d": {
+            "MAE": 498.88220551378447,
+            "RMSE": 687.4591972919424,
+            "R2": 0.7975713655032624,
+            "rows_evaluated": 570
+          },
+          "rolling_mean_30d": {
+            "MAE": 613.1958651399491,
+            "RMSE": 820.9348463843264,
+            "R2": 0.7010164363782156,
+            "rows_evaluated": 524
+          },
+          "trend_adjusted_persistence_7d": {
+            "MAE": 399.6986183074266,
+            "RMSE": 544.3776892534253,
+            "R2": 0.8730627944457826,
+            "rows_evaluated": 579
+          }
+        },
+        "common_row_metrics": {
+          "persistence_lag_1d": {
+            "MAE": 351.0267175572519,
+            "RMSE": 475.44898426773545,
+            "R2": 0.8997145839551081,
+            "rows_evaluated": 524
+          },
+          "seasonal_persistence_lag_7d": {
+            "MAE": 669.2862595419847,
+            "RMSE": 941.4964112339527,
+            "R2": 0.6067513226775487,
+            "rows_evaluated": 524
+          },
+          "rolling_mean_7d": {
+            "MAE": 489.88740458015263,
+            "RMSE": 662.1878870448104,
+            "R2": 0.8054673973828907,
+            "rows_evaluated": 524
+          },
+          "rolling_mean_30d": {
+            "MAE": 613.1958651399491,
+            "RMSE": 820.9348463843264,
+            "R2": 0.7010164363782156,
+            "rows_evaluated": 524
+          },
+          "trend_adjusted_persistence_7d": {
+            "MAE": 398.15012722646316,
+            "RMSE": 537.7225607828763,
+            "R2": 0.8717236927780425,
+            "rows_evaluated": 524
+          }
+        },
+        "common_rows": 524
+      }
+    }
+  },
+  "notes": [
+    "All predictors are existing prior-demand features and do not use the target date's observed demand.",
+    "No imputation is performed; each baseline is evaluated only where its required historical values exist.",
+    "Individual-method metrics can use different row counts.",
+    "Common-row metrics evaluate every baseline on exactly the same dates and should be used for fair ranking.",
+    "The 30-day rolling feature is used instead of a 28-day feature because the current feature dataset contains rolling_mean_30d.",
+    "These are daily state-level demand baselines, not feeder-level forecasts."
+  ]
+}

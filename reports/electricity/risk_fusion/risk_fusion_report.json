@@ -1,0 +1,53 @@
+{
+    "project": "GridGuard AI",
+    "module": "demand_weather_risk_fusion",
+    "interpretation": "Combined statistical screening indicator based on historical demand pressure and unusual weather conditions. It is not a verified grid-overload or outage prediction.",
+    "formula": "combined_risk_score = 2 * demand_pressure_score + weather_risk_score",
+    "demand_score_mapping": {
+        "normal": 0,
+        "elevated": 1,
+        "high": 2,
+        "critical": 3
+    },
+    "weather_score_mapping": {
+        "normal": 0,
+        "elevated": 1,
+        "high": 2
+    },
+    "combined_score_categories": {
+        "0-1": "normal",
+        "2-3": "elevated",
+        "4-5": "high",
+        "6-8": "critical"
+    },
+    "join": {
+        "method": "outer join on date",
+        "demand_rows": 4136,
+        "weather_rows": 4136,
+        "output_rows": 4136,
+        "date_min": "2013-01-01",
+        "date_max": "2024-04-28",
+        "merge_counts": {
+            "both": 4136,
+            "left_only": 0,
+            "right_only": 0
+        }
+    },
+    "combined_risk_distribution": {
+        "normal": 1902,
+        "elevated": 893,
+        "critical": 767,
+        "high": 332,
+        "unknown": 242
+    },
+    "weather_component_unavailable_days": 0,
+    "limitations": [
+        "No official available-capacity or reserve-margin data is available.",
+        "Combined categories are statistical screening levels, not physical grid states.",
+        "Weather is weighted less than demand by an explicit design choice.",
+        "Weather-only high risk cannot independently establish grid stress.",
+        "Historical rolling weather features are not live weather forecasts.",
+        "Weather stations do not provide feeder-level coverage.",
+        "Missing weather is treated as unavailable, not as zero risk."
+    ]
+}

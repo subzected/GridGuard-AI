@@ -1,0 +1,39 @@
+{
+    "imd_records": 87660,
+    "openmeteo_records": 40908,
+    "merged_records": 40908,
+    "matched_locations": [
+        "asansol",
+        "darjeeling",
+        "durgapur",
+        "haldia",
+        "howrah",
+        "kolkata",
+        "siliguri"
+    ],
+    "imd_only_locations": [
+        "bankura",
+        "bardhaman",
+        "berhampore",
+        "cooch_behar",
+        "kharagpur",
+        "krishnanagar",
+        "malda",
+        "purulia"
+    ],
+    "openmeteo_only_locations": [],
+    "matched_location_count": 7,
+    "unmatched_imd_records": 46752,
+    "duplicate_merge_keys": 0,
+    "date_range": {
+        "start": "2010-01-01",
+        "end": "2025-12-31"
+    },
+    "temperature_comparison": {
+        "mean_absolute_difference_c": 2.017302896637971,
+        "mean_difference_c": 1.1676918751172125
+    },
+    "precipitation_comparison": {
+        "mean_absolute_difference_mm": 5.683233108997925
+    }
+}

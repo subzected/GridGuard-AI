@@ -1,0 +1,208 @@
+{
+  "project": "GridGuard AI",
+  "dataset": "F:\\powergrid-ai\\data\\processed\\west_bengal_demand_weather_dataset.csv",
+  "split_method": "chronological",
+  "split_fractions": {
+    "train": 0.7,
+    "validation": 0.15,
+    "test": 0.15000000000000005
+  },
+  "feature_columns": [
+    "day_of_week",
+    "day_of_month",
+    "month",
+    "day_of_year",
+    "week_of_year",
+    "is_weekend",
+    "day_of_year_sin",
+    "day_of_year_cos",
+    "energy_MU_lag_1d",
+    "energy_MU_lag_7d",
+    "energy_MU_lag_14d",
+    "energy_MU_lag_28d",
+    "energy_MU_rolling_mean_7d",
+    "energy_MU_rolling_std_7d",
+    "energy_MU_rolling_min_7d",
+    "energy_MU_rolling_max_7d",
+    "energy_MU_rolling_mean_14d",
+    "energy_MU_rolling_std_14d",
+    "energy_MU_rolling_min_14d",
+    "energy_MU_rolling_max_14d",
+    "energy_MU_rolling_mean_30d",
+    "energy_MU_rolling_std_30d",
+    "energy_MU_rolling_min_30d",
+    "energy_MU_rolling_max_30d",
+    "energy_MU_change_1d_pct",
+    "energy_MU_change_7d_pct",
+    "peak_demand_MW_lag_1d",
+    "peak_demand_MW_lag_7d",
+    "peak_demand_MW_lag_14d",
+    "peak_demand_MW_lag_28d",
+    "peak_demand_MW_rolling_mean_7d",
+    "peak_demand_MW_rolling_std_7d",
+    "peak_demand_MW_rolling_min_7d",
+    "peak_demand_MW_rolling_max_7d",
+    "peak_demand_MW_rolling_mean_14d",
+    "peak_demand_MW_rolling_std_14d",
+    "peak_demand_MW_rolling_min_14d",
+    "peak_demand_MW_rolling_max_14d",
+    "peak_demand_MW_rolling_mean_30d",
+    "peak_demand_MW_rolling_std_30d",
+    "peak_demand_MW_rolling_min_30d",
+    "peak_demand_MW_rolling_max_30d",
+    "peak_demand_MW_change_1d_pct",
+    "peak_demand_MW_change_7d_pct",
+    "imd_rainfall_3d_mm_spatial_median",
+    "imd_wet_days_3d_spatial_median",
+    "imd_rainfall_7d_mm_spatial_median",
+    "imd_wet_days_7d_spatial_median",
+    "imd_rainfall_14d_mm_spatial_median",
+    "imd_wet_days_14d_spatial_median",
+    "imd_consecutive_wet_days_spatial_median",
+    "imd_temperature_mean_3d_c_spatial_median",
+    "imd_temperature_mean_7d_c_spatial_median",
+    "imd_temperature_change_3d_c_spatial_median",
+    "imd_rainfall_3d_mm_spatial_max",
+    "imd_wet_days_3d_spatial_max",
+    "imd_rainfall_7d_mm_spatial_max",
+    "imd_wet_days_7d_spatial_max",
+    "imd_rainfall_14d_mm_spatial_max",
+    "imd_wet_days_14d_spatial_max",
+    "imd_consecutive_wet_days_spatial_max",
+    "imd_temperature_mean_3d_c_spatial_max",
+    "imd_temperature_mean_7d_c_spatial_max",
+    "imd_temperature_change_3d_c_spatial_max",
+    "imd_location_count",
+    "open_meteo_rainfall_3d_mm_spatial_median",
+    "open_meteo_wet_days_3d_spatial_median",
+    "open_meteo_rainfall_7d_mm_spatial_median",
+    "open_meteo_wet_days_7d_spatial_median",
+    "open_meteo_rainfall_14d_mm_spatial_median",
+    "open_meteo_wet_days_14d_spatial_median",
+    "open_meteo_consecutive_wet_days_spatial_median",
+    "open_meteo_temperature_mean_3d_c_spatial_median",
+    "open_meteo_temperature_mean_7d_c_spatial_median",
+    "open_meteo_temperature_change_3d_c_spatial_median",
+    "open_meteo_humidity_mean_7d_pct_spatial_median",
+    "open_meteo_wind_speed_mean_7d_spatial_median",
+    "open_meteo_wind_speed_max_7d_spatial_median",
+    "open_meteo_pressure_mean_7d_hpa_spatial_median",
+    "open_meteo_pressure_change_1d_hpa_spatial_median",
+    "open_meteo_rainfall_3d_mm_spatial_max",
+    "open_meteo_wet_days_3d_spatial_max",
+    "open_meteo_rainfall_7d_mm_spatial_max",
+    "open_meteo_wet_days_7d_spatial_max",
+    "open_meteo_rainfall_14d_mm_spatial_max",
+    "open_meteo_wet_days_14d_spatial_max",
+    "open_meteo_consecutive_wet_days_spatial_max",
+    "open_meteo_temperature_mean_3d_c_spatial_max",
+    "open_meteo_temperature_mean_7d_c_spatial_max",
+    "open_meteo_temperature_change_3d_c_spatial_max",
+    "open_meteo_humidity_mean_7d_pct_spatial_max",
+    "open_meteo_wind_speed_mean_7d_spatial_max",
+    "open_meteo_wind_speed_max_7d_spatial_max",
+    "open_meteo_pressure_mean_7d_hpa_spatial_max",
+    "open_meteo_pressure_change_1d_hpa_spatial_max",
+    "open_meteo_location_count"
+  ],
+  "targets": {
+    "energy_MU": {
+      "target": "energy_MU",
+      "selected_model": "naive_lag_1d",
+      "selected_model_type": "baseline",
+      "model_path": null,
+      "train_rows": 2725,
+      "validation_rows": 584,
+      "test_rows": 585,
+      "feature_count": 96,
+      "validation_metrics": {
+        "random_forest": {
+          "MAE": 7.382432119673268,
+          "RMSE": 9.744386492407443,
+          "R2": 0.8764554659403186,
+          "MAPE_percent": 4.565865169405164
+        },
+        "hist_gradient_boosting": {
+          "MAE": 6.853498152305485,
+          "RMSE": 9.272330406116176,
+          "R2": 0.8881354883566082,
+          "MAPE_percent": 4.230972188060429
+        }
+      },
+      "validation_baselines": {
+        "naive_lag_1d": {
+          "MAE": 6.333333333333333,
+          "RMSE": 8.654609682759096,
+          "R2": 0.9035303174503027,
+          "MAPE_percent": 4.129405823682735
+        },
+        "seasonal_naive_lag_7d": {
+          "MAE": 11.42,
+          "RMSE": 16.250039676064922,
+          "R2": 0.6606159481031075,
+          "MAPE_percent": 7.426223885380029
+        }
+      },
+      "test_metrics": {
+        "MAE": 6.951890034364261,
+        "RMSE": 9.517466309289127,
+        "R2": 0.929516657665749,
+        "MAPE_percent": 4.099272926160098
+      },
+      "test_prediction_rows": 582
+    },
+    "peak_demand_MW": {
+      "target": "peak_demand_MW",
+      "selected_model": "hist_gradient_boosting",
+      "selected_model_type": "trained_model",
+      "model_path": "F:\\powergrid-ai\\ml\\models\\demand\\peak_demand_MW_hist_gradient_boosting.joblib",
+      "train_rows": 2725,
+      "validation_rows": 584,
+      "test_rows": 585,
+      "feature_count": 96,
+      "validation_metrics": {
+        "random_forest": {
+          "MAE": 314.1599336684041,
+          "RMSE": 413.09919011845733,
+          "R2": 0.8691015098417948,
+          "MAPE_percent": 3.936860530908165
+        },
+        "hist_gradient_boosting": {
+          "MAE": 308.3661175235019,
+          "RMSE": 405.01229418574115,
+          "R2": 0.8741763257625104,
+          "MAPE_percent": 3.876035102953237
+        }
+      },
+      "validation_baselines": {
+        "naive_lag_1d": {
+          "MAE": 308.94938917975566,
+          "RMSE": 420.25264569412826,
+          "R2": 0.8658383587044847,
+          "MAPE_percent": 4.079270926622164
+        },
+        "seasonal_naive_lag_7d": {
+          "MAE": 505.07719298245615,
+          "RMSE": 676.481547575783,
+          "R2": 0.6529907680408272,
+          "MAPE_percent": 6.5028020031029925
+        }
+      },
+      "test_metrics": {
+        "MAE": 487.19406519068036,
+        "RMSE": 750.7754924875685,
+        "R2": 0.7580694819526325,
+        "MAPE_percent": 5.3154190419030085
+      },
+      "test_prediction_rows": 585
+    }
+  },
+  "notes": [
+    "Rows with missing target values were excluded from supervised training.",
+    "Median imputation is fitted on training data only; final selected model is refitted on train plus validation.",
+    "Test data is not used for model selection.",
+    "Weather predictors are historical prior-day features, not same-day weather forecasts.",
+    "The two incorrectly named locations_with_any_weather_feature columns are excluded.",
+    "Results measure daily state-level demand forecasting, not confirmed grid outages or feeder-level failures."
+  ]
+}

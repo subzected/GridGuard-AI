@@ -1,0 +1,575 @@
+{
+  "created_at_utc": "2026-11-10T10:20:37.089198+00:00",
+  "purpose": "Post-training diagnostics only; no model fitting or selection.",
+  "test_period": {
+    "start": "2022-09-19",
+    "end": "2024-04-28",
+    "rows": 585
+  },
+  "targets": {
+    "energy_MU": {
+      "model_name": "LightGBM",
+      "test_metrics": {
+        "mae": 12.482971286965695,
+        "rmse": 17.946035658538012,
+        "r2": 0.7500340765098282,
+        "mean_error_actual_minus_predicted": 10.833358476880681,
+        "median_absolute_error": 8.04718729628867,
+        "max_absolute_error": 64.92346997310946
+      },
+      "model_metrics_on_persistence_comparable_rows": {
+        "mae": 12.518089430540208,
+        "rmse": 17.983342140665094,
+        "r2": 0.748357142605127,
+        "mean_error_actual_minus_predicted": 10.86462618630676,
+        "median_absolute_error": 8.050523971447653,
+        "max_absolute_error": 64.92346997310946,
+        "rows": 582
+      },
+      "persistence_baseline_metrics": {
+        "mae": 6.951890034364261,
+        "rmse": 9.517466309289127,
+        "r2": 0.929516657665749,
+        "mean_error_actual_minus_predicted": 0.20721649484536084,
+        "median_absolute_error": 5.299999999999983,
+        "max_absolute_error": 39.29999999999998,
+        "rows": 582
+      },
+      "feature_group_gain_importance_pct": {
+        "Demand history": 90.62127551476901,
+        "Weather": 7.131759707248985,
+        "Calendar": 2.246964777981996
+      },
+      "top_15_features": [
+        {
+          "feature": "energy_MU_lag_1d",
+          "gain_importance_pct": 77.81426837496896,
+          "split_importance": 520.0
+        },
+        {
+          "feature": "peak_demand_MW_lag_1d",
+          "gain_importance_pct": 6.375794230931795,
+          "split_importance": 230.0
+        },
+        {
+          "feature": "open_meteo_temperature_mean_3d_c_spatial_max",
+          "gain_importance_pct": 2.672737289750889,
+          "split_importance": 89.0
+        },
+        {
+          "feature": "day_of_week",
+          "gain_importance_pct": 1.2268728467805763,
+          "split_importance": 324.0
+        },
+        {
+          "feature": "energy_MU_lag_14d",
+          "gain_importance_pct": 1.0817681191952646,
+          "split_importance": 202.0
+        },
+        {
+          "feature": "energy_MU_lag_7d",
+          "gain_importance_pct": 0.9304304998061749,
+          "split_importance": 181.0
+        },
+        {
+          "feature": "energy_MU_rolling_max_7d",
+          "gain_importance_pct": 0.8404442844260125,
+          "split_importance": 60.0
+        },
+        {
+          "feature": "peak_demand_MW_change_1d_pct",
+          "gain_importance_pct": 0.587183775518183,
+          "split_importance": 323.0
+        },
+        {
+          "feature": "imd_temperature_mean_3d_c_spatial_max",
+          "gain_importance_pct": 0.5283583789068955,
+          "split_importance": 139.0
+        },
+        {
+          "feature": "open_meteo_temperature_change_3d_c_spatial_median",
+          "gain_importance_pct": 0.4305089093808382,
+          "split_importance": 181.0
+        },
+        {
+          "feature": "peak_demand_MW_lag_7d",
+          "gain_importance_pct": 0.3888289063865502,
+          "split_importance": 125.0
+        },
+        {
+          "feature": "energy_MU_lag_28d",
+          "gain_importance_pct": 0.34159154316008905,
+          "split_importance": 217.0
+        },
+        {
+          "feature": "day_of_year_cos",
+          "gain_importance_pct": 0.3042951284024382,
+          "split_importance": 95.0
+        },
+        {
+          "feature": "peak_demand_MW_change_7d_pct",
+          "gain_importance_pct": 0.29532311033921227,
+          "split_importance": 164.0
+        },
+        {
+          "feature": "energy_MU_change_1d_pct",
+          "gain_importance_pct": 0.2764823682641241,
+          "split_importance": 197.0
+        }
+      ],
+      "monthly_mae_max": {
+        "month": "2024-04",
+        "rows": 28,
+        "mae": 40.650285294564306,
+        "mean_signed_error": 40.214616959849295,
+        "actual_mean": 230.54999999999998,
+        "predicted_mean": 190.3353830401507,
+        "target": "energy_MU"
+      },
+      "monthly_mae_min": {
+        "month": "2022-12",
+        "rows": 30,
+        "mae": 3.4238669951088725,
+        "mean_signed_error": 3.1697135996541674,
+        "actual_mean": 120.66000000000001,
+        "predicted_mean": 117.49028640034584,
+        "target": "energy_MU"
+      },
+      "demand_range_errors": [
+        {
+          "actual_demand_range": "(105.29899999999999, 134.46]",
+          "rows": 117,
+          "mae": 4.599654424386656,
+          "mean_signed_error": 2.8987419348194234,
+          "actual_mean": 125.64786324786324,
+          "target": "energy_MU"
+        },
+        {
+          "actual_demand_range": "(134.46, 150.2]",
+          "rows": 118,
+          "mae": 8.967300607126818,
+          "mean_signed_error": 6.903468669279044,
+          "actual_mean": 142.49745762711865,
+          "target": "energy_MU"
+        },
+        {
+          "actual_demand_range": "(150.2, 177.34]",
+          "rows": 116,
+          "mae": 6.7177184834604295,
+          "mean_signed_error": 3.1536793282597695,
+          "actual_mean": 162.72931034482758,
+          "target": "energy_MU"
+        },
+        {
+          "actual_demand_range": "(177.34, 205.4]",
+          "rows": 118,
+          "mae": 9.093910285416435,
+          "mean_signed_error": 8.169706709560051,
+          "actual_mean": 191.21864406779662,
+          "target": "energy_MU"
+        },
+        {
+          "actual_demand_range": "(205.4, 260.4]",
+          "rows": 116,
+          "mae": 33.22327936051879,
+          "mean_signed_error": 33.22327936051879,
+          "actual_mean": 223.5612068965517,
+          "target": "energy_MU"
+        }
+      ],
+      "worst_15_test_days": [
+        {
+          "date": "2024-04-26",
+          "energy_MU_actual": 260.4,
+          "energy_MU_predicted": 195.47653002689052,
+          "residual": 64.92346997310946,
+          "absolute_error": 64.92346997310946
+        },
+        {
+          "date": "2024-04-27",
+          "energy_MU_actual": 258.2,
+          "energy_MU_predicted": 193.9756604491884,
+          "residual": 64.22433955081158,
+          "absolute_error": 64.22433955081158
+        },
+        {
+          "date": "2024-04-20",
+          "energy_MU_actual": 251.8,
+          "energy_MU_predicted": 188.81583545655656,
+          "residual": 62.984164543443455,
+          "absolute_error": 62.984164543443455
+        },
+        {
+          "date": "2024-04-19",
+          "energy_MU_actual": 244.0,
+          "energy_MU_predicted": 182.1458138183428,
+          "residual": 61.85418618165721,
+          "absolute_error": 61.85418618165721
+        },
+        {
+          "date": "2024-04-06",
+          "energy_MU_actual": 246.6,
+          "energy_MU_predicted": 185.88173468035365,
+          "residual": 60.71826531964635,
+          "absolute_error": 60.71826531964635
+        },
+        {
+          "date": "2023-06-08",
+          "energy_MU_actual": 243.1,
+          "energy_MU_predicted": 184.97319971114592,
+          "residual": 58.12680028885407,
+          "absolute_error": 58.12680028885407
+        },
+        {
+          "date": "2024-04-25",
+          "energy_MU_actual": 251.2,
+          "energy_MU_predicted": 193.4269106851454,
+          "residual": 57.77308931485459,
+          "absolute_error": 57.77308931485459
+        },
+        {
+          "date": "2024-04-28",
+          "energy_MU_actual": 248.9,
+          "energy_MU_predicted": 191.2252324976085,
+          "residual": 57.67476750239152,
+          "absolute_error": 57.67476750239152
+        },
+        {
+          "date": "2024-04-21",
+          "energy_MU_actual": 243.1,
+          "energy_MU_predicted": 186.1397660921785,
+          "residual": 56.960233907821504,
+          "absolute_error": 56.960233907821504
+        },
+        {
+          "date": "2024-04-17",
+          "energy_MU_actual": 249.6,
+          "energy_MU_predicted": 192.67002315676456,
+          "residual": 56.92997684323544,
+          "absolute_error": 56.92997684323544
+        },
+        {
+          "date": "2024-04-18",
+          "energy_MU_actual": 246.9,
+          "energy_MU_predicted": 190.5510035236311,
+          "residual": 56.34899647636891,
+          "absolute_error": 56.34899647636891
+        },
+        {
+          "date": "2023-06-07",
+          "energy_MU_actual": 238.4,
+          "energy_MU_predicted": 182.6908428269894,
+          "residual": 55.709157173010595,
+          "absolute_error": 55.709157173010595
+        },
+        {
+          "date": "2024-04-24",
+          "energy_MU_actual": 245.2,
+          "energy_MU_predicted": 191.51688884527636,
+          "residual": 53.68311115472363,
+          "absolute_error": 53.68311115472363
+        },
+        {
+          "date": "2023-06-06",
+          "energy_MU_actual": 237.6,
+          "energy_MU_predicted": 184.43027936020627,
+          "residual": 53.169720639793724,
+          "absolute_error": 53.169720639793724
+        },
+        {
+          "date": "2023-04-18",
+          "energy_MU_actual": 245.7,
+          "energy_MU_predicted": 193.1530931603204,
+          "residual": 52.54690683967959,
+          "absolute_error": 52.54690683967959
+        }
+      ]
+    },
+    "peak_demand_MW": {
+      "model_name": "LightGBM",
+      "test_metrics": {
+        "mae": 489.4930591762852,
+        "rmse": 761.3107704126029,
+        "r2": 0.751232049559007,
+        "mean_error_actual_minus_predicted": 315.56499240314196,
+        "median_absolute_error": 268.29364898435233,
+        "max_absolute_error": 3042.773830023394
+      },
+      "model_metrics_on_persistence_comparable_rows": {
+        "mae": 491.9372741440983,
+        "rmse": 763.2693998852089,
+        "r2": 0.7499491621061063,
+        "mean_error_actual_minus_predicted": 317.1557345873779,
+        "median_absolute_error": 268.7680587901573,
+        "max_absolute_error": 3042.773830023394,
+        "rows": 582
+      },
+      "persistence_baseline_metrics": {
+        "mae": 352.1529209621993,
+        "rmse": 480.6353702200133,
+        "r2": 0.9008474092374144,
+        "mean_error_actual_minus_predicted": 8.47938144329897,
+        "median_absolute_error": 245.5,
+        "max_absolute_error": 2325.0,
+        "rows": 582
+      },
+      "feature_group_gain_importance_pct": {
+        "Demand history": 90.52852045730411,
+        "Weather": 6.28871406700059,
+        "Calendar": 3.182765475695296
+      },
+      "top_15_features": [
+        {
+          "feature": "peak_demand_MW_lag_1d",
+          "gain_importance_pct": 68.71935816074068,
+          "split_importance": 471.0
+        },
+        {
+          "feature": "energy_MU_lag_1d",
+          "gain_importance_pct": 9.941179197479103,
+          "split_importance": 251.0
+        },
+        {
+          "feature": "peak_demand_MW_lag_7d",
+          "gain_importance_pct": 3.462089612077583,
+          "split_importance": 151.0
+        },
+        {
+          "feature": "day_of_week",
+          "gain_importance_pct": 1.9418076655941159,
+          "split_importance": 306.0
+        },
+        {
+          "feature": "peak_demand_MW_lag_14d",
+          "gain_importance_pct": 1.7573068100321054,
+          "split_importance": 197.0
+        },
+        {
+          "feature": "peak_demand_MW_rolling_mean_7d",
+          "gain_importance_pct": 1.4696551030083498,
+          "split_importance": 69.0
+        },
+        {
+          "feature": "energy_MU_lag_14d",
+          "gain_importance_pct": 0.6161306703895318,
+          "split_importance": 160.0
+        },
+        {
+          "feature": "peak_demand_MW_lag_28d",
+          "gain_importance_pct": 0.46537295271959317,
+          "split_importance": 167.0
+        },
+        {
+          "feature": "energy_MU_rolling_mean_7d",
+          "gain_importance_pct": 0.4089845410795918,
+          "split_importance": 48.0
+        },
+        {
+          "feature": "open_meteo_temperature_mean_3d_c_spatial_max",
+          "gain_importance_pct": 0.35867400870653293,
+          "split_importance": 67.0
+        },
+        {
+          "feature": "energy_MU_change_7d_pct",
+          "gain_importance_pct": 0.35508527106356635,
+          "split_importance": 185.0
+        },
+        {
+          "feature": "energy_MU_lag_7d",
+          "gain_importance_pct": 0.35502886821032165,
+          "split_importance": 116.0
+        },
+        {
+          "feature": "open_meteo_temperature_change_3d_c_spatial_median",
+          "gain_importance_pct": 0.3498714657187683,
+          "split_importance": 166.0
+        },
+        {
+          "feature": "energy_MU_lag_28d",
+          "gain_importance_pct": 0.33778023273529334,
+          "split_importance": 152.0
+        },
+        {
+          "feature": "open_meteo_pressure_change_1d_hpa_spatial_median",
+          "gain_importance_pct": 0.32853840263583234,
+          "split_importance": 207.0
+        }
+      ],
+      "monthly_mae_max": {
+        "month": "2024-04",
+        "rows": 28,
+        "mae": 1786.3414379526546,
+        "mean_signed_error": 1750.843606073485,
+        "actual_mean": 10940.07142857143,
+        "predicted_mean": 9189.227822497944,
+        "target": "peak_demand_MW"
+      },
+      "monthly_mae_min": {
+        "month": "2023-12",
+        "rows": 31,
+        "mae": 144.5343583934431,
+        "mean_signed_error": 46.015460883428965,
+        "actual_mean": 6575.677419354839,
+        "predicted_mean": 6529.66195847141,
+        "target": "peak_demand_MW"
+      },
+      "demand_range_errors": [
+        {
+          "actual_demand_range": "(5505.999, 6841.8]",
+          "rows": 117,
+          "mae": 222.4717594219606,
+          "mean_signed_error": -69.43927195667763,
+          "actual_mean": 6528.076923076923,
+          "target": "peak_demand_MW"
+        },
+        {
+          "actual_demand_range": "(6841.8, 7378.8]",
+          "rows": 117,
+          "mae": 234.27119802369037,
+          "mean_signed_error": 47.91644808640694,
+          "actual_mean": 7100.076923076923,
+          "target": "peak_demand_MW"
+        },
+        {
+          "actual_demand_range": "(7378.8, 8428.8]",
+          "rows": 117,
+          "mae": 308.78786482316644,
+          "mean_signed_error": 38.09376228243393,
+          "actual_mean": 7877.752136752137,
+          "target": "peak_demand_MW"
+        },
+        {
+          "actual_demand_range": "(8428.8, 9716.0]",
+          "rows": 117,
+          "mae": 311.34348221136844,
+          "mean_signed_error": 190.6630322023065,
+          "actual_mean": 9123.017094017094,
+          "target": "peak_demand_MW"
+        },
+        {
+          "actual_demand_range": "(9716.0, 12313.0]",
+          "rows": 117,
+          "mae": 1370.59099140124,
+          "mean_signed_error": 1370.59099140124,
+          "actual_mean": 10628.333333333334,
+          "target": "peak_demand_MW"
+        }
+      ],
+      "worst_15_test_days": [
+        {
+          "date": "2024-04-28",
+          "peak_demand_MW_actual": 12313.0,
+          "peak_demand_MW_predicted": 9270.226169976606,
+          "residual": 3042.773830023394,
+          "absolute_error": 3042.773830023394
+        },
+        {
+          "date": "2024-04-27",
+          "peak_demand_MW_actual": 12254.0,
+          "peak_demand_MW_predicted": 9288.992815067546,
+          "residual": 2965.007184932454,
+          "absolute_error": 2965.007184932454
+        },
+        {
+          "date": "2024-04-26",
+          "peak_demand_MW_actual": 12262.0,
+          "peak_demand_MW_predicted": 9316.599724017817,
+          "residual": 2945.4002759821833,
+          "absolute_error": 2945.4002759821833
+        },
+        {
+          "date": "2024-04-19",
+          "peak_demand_MW_actual": 11887.0,
+          "peak_demand_MW_predicted": 8993.018358992224,
+          "residual": 2893.9816410077765,
+          "absolute_error": 2893.9816410077765
+        },
+        {
+          "date": "2024-04-20",
+          "peak_demand_MW_actual": 12056.0,
+          "peak_demand_MW_predicted": 9206.634993323863,
+          "residual": 2849.3650066761365,
+          "absolute_error": 2849.3650066761365
+        },
+        {
+          "date": "2024-04-21",
+          "peak_demand_MW_actual": 11831.0,
+          "peak_demand_MW_predicted": 9145.88033405287,
+          "residual": 2685.1196659471298,
+          "absolute_error": 2685.1196659471298
+        },
+        {
+          "date": "2023-06-08",
+          "peak_demand_MW_actual": 11806.0,
+          "peak_demand_MW_predicted": 9173.571100127145,
+          "residual": 2632.4288998728553,
+          "absolute_error": 2632.4288998728553
+        },
+        {
+          "date": "2024-04-24",
+          "peak_demand_MW_actual": 11927.0,
+          "peak_demand_MW_predicted": 9334.14547217835,
+          "residual": 2592.8545278216498,
+          "absolute_error": 2592.8545278216498
+        },
+        {
+          "date": "2024-04-25",
+          "peak_demand_MW_actual": 11918.0,
+          "peak_demand_MW_predicted": 9351.497495238858,
+          "residual": 2566.5025047611416,
+          "absolute_error": 2566.5025047611416
+        },
+        {
+          "date": "2024-04-18",
+          "peak_demand_MW_actual": 11737.0,
+          "peak_demand_MW_predicted": 9171.594505643903,
+          "residual": 2565.405494356097,
+          "absolute_error": 2565.405494356097
+        },
+        {
+          "date": "2024-04-17",
+          "peak_demand_MW_actual": 11811.0,
+          "peak_demand_MW_predicted": 9255.173385809008,
+          "residual": 2555.8266141909917,
+          "absolute_error": 2555.8266141909917
+        },
+        {
+          "date": "2023-04-18",
+          "peak_demand_MW_actual": 11868.0,
+          "peak_demand_MW_predicted": 9378.367085766316,
+          "residual": 2489.6329142336836,
+          "absolute_error": 2489.6329142336836
+        },
+        {
+          "date": "2024-04-22",
+          "peak_demand_MW_actual": 11613.0,
+          "peak_demand_MW_predicted": 9326.26243847027,
+          "residual": 2286.7375615297296,
+          "absolute_error": 2286.7375615297296
+        },
+        {
+          "date": "2023-06-09",
+          "peak_demand_MW_actual": 11416.0,
+          "peak_demand_MW_predicted": 9138.283240264049,
+          "residual": 2277.716759735951,
+          "absolute_error": 2277.716759735951
+        },
+        {
+          "date": "2023-06-03",
+          "peak_demand_MW_actual": 11366.0,
+          "peak_demand_MW_predicted": 9093.486942103484,
+          "residual": 2272.5130578965163,
+          "absolute_error": 2272.5130578965163
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "plots_directory": "F:\\powergrid-ai\\reports\\electricity\\advanced_diagnostics\\plots",
+    "tables_directory": "F:\\powergrid-ai\\reports\\electricity\\advanced_diagnostics\\tables",
+    "residuals_csv": "F:\\powergrid-ai\\reports\\electricity\\advanced_diagnostics\\tables\\test_residuals.csv",
+    "feature_importance_csv": "F:\\powergrid-ai\\reports\\electricity\\advanced_diagnostics\\tables\\feature_importance_all_targets.csv",
+    "monthly_errors_csv": "F:\\powergrid-ai\\reports\\electricity\\advanced_diagnostics\\tables\\monthly_errors_all_targets.csv",
+    "report_json": "F:\\powergrid-ai\\reports\\electricity\\advanced_diagnostics\\advanced_model_diagnostics_report.json"
+  }
+}

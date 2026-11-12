@@ -1,0 +1,97 @@
+
+project:
+  name: GridGuard AI
+  version: "1.0.0"
+  timezone: UTC
+  random_state: 42
+
+paths:
+  raw_data: data/raw
+  processed_data: data/processed
+  models: ml/models
+  reports: ml/reports
+
+files:
+  weather: weather_snapshots.csv
+  events: outage_events.csv
+  coverage: coverage.csv
+  dataset: labelled_dataset.csv
+
+prediction:
+  horizons:
+    "15m": 15
+    "30m": 30
+    "60m": 60
+
+  snapshot_frequency_minutes: 15
+  embargo_minutes: 60
+
+  
+features:
+  numeric:
+    - temp_c
+    - humidity_pct
+    - precipitation_mm
+    - rain_mm
+    - precipitation_probability_pct
+    # - thunderstorm_probability_pct
+    - wind_speed_kmh
+    - wind_gusts_kmh
+    - pressure_hpa
+    - latitude
+    - longitude
+
+  categorical:
+    - location_id
+    - weather_code
+
+  derived:
+    - wind_gust_delta
+    - wind_direction_sin
+    - wind_direction_cos
+    - precipitation_wind_interaction
+    - temperature_humidity_index
+
+  metadata:
+    - location_name
+    - forecast_valid_time
+    - fetched_at
+    - source
+    - temporal_resolution
+
+
+training:
+  train_fraction: 0.60
+  validation_fraction: 0.15
+  calibration_fraction: 0.10
+  test_fraction: 0.15
+
+  min_samples: 100
+  min_positive_samples: 20
+
+  models:
+    - logistic_regression
+    - random_forest
+    - hist_gradient_boosting
+
+  hyperparameter_tuning:
+    enabled: true
+    trials: 20
+
+calibration:
+  method: sigmoid
+
+evaluation:
+  threshold_metric: f1
+  threshold_min: 0.05
+  threshold_max: 0.95
+  threshold_step: 0.01
+
+data_quality:
+  max_missing_feature_fraction: 0.30
+  max_weather_age_minutes: 30
+  reject_duplicate_snapshots: true
+
+inference:
+  stale_data_minutes: 30
+  default_horizon: "15m"

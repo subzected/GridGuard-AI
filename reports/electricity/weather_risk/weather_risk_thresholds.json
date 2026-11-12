@@ -1,0 +1,601 @@
+{
+    "heat": {
+        "imd_temperature_mean_3d_c_spatial_median": {
+            "by_month": {
+                "1": {
+                    "elevated": 19.60465666453043,
+                    "high": 20.14698063532511,
+                    "observations": 279
+                },
+                "2": {
+                    "elevated": 24.542912673950195,
+                    "high": 25.336240386962885,
+                    "observations": 239
+                },
+                "3": {
+                    "elevated": 28.907864538828534,
+                    "high": 29.258127037684122,
+                    "observations": 248
+                },
+                "4": {
+                    "elevated": 32.24462617238363,
+                    "high": 32.77337754567464,
+                    "observations": 240
+                },
+                "5": {
+                    "elevated": 32.48718967437745,
+                    "high": 33.18756494522095,
+                    "observations": 248
+                },
+                "6": {
+                    "elevated": 32.311959743499756,
+                    "high": 32.71780740420024,
+                    "observations": 240
+                },
+                "7": {
+                    "elevated": 30.57447455724081,
+                    "high": 30.88823719024658,
+                    "observations": 248
+                },
+                "8": {
+                    "elevated": 30.10067399342855,
+                    "high": 30.356759595870972,
+                    "observations": 248
+                },
+                "9": {
+                    "elevated": 30.369621753692627,
+                    "high": 30.540302673975628,
+                    "observations": 240
+                },
+                "10": {
+                    "elevated": 29.620948378245036,
+                    "high": 29.97151254018148,
+                    "observations": 248
+                },
+                "11": {
+                    "elevated": 25.702964051564535,
+                    "high": 26.315797599156696,
+                    "observations": 240
+                },
+                "12": {
+                    "elevated": 21.925576512018836,
+                    "high": 22.649623521169026,
+                    "observations": 248
+                }
+            }
+        },
+        "imd_temperature_mean_7d_c_spatial_median": {
+            "by_month": {
+                "1": {
+                    "elevated": 19.22710887363979,
+                    "high": 19.68071449143546,
+                    "observations": 279
+                },
+                "2": {
+                    "elevated": 23.881450530460903,
+                    "high": 24.6903597014291,
+                    "observations": 239
+                },
+                "3": {
+                    "elevated": 28.14809318270002,
+                    "high": 28.657555866241456,
+                    "observations": 248
+                },
+                "4": {
+                    "elevated": 31.74088396344866,
+                    "high": 32.57090950693403,
+                    "observations": 240
+                },
+                "5": {
+                    "elevated": 32.277711854662215,
+                    "high": 32.82393473897661,
+                    "observations": 248
+                },
+                "6": {
+                    "elevated": 32.038803931644985,
+                    "high": 32.40701606614249,
+                    "observations": 240
+                },
+                "7": {
+                    "elevated": 30.43055159705026,
+                    "high": 30.716548006875176,
+                    "observations": 248
+                },
+                "8": {
+                    "elevated": 29.85014182499477,
+                    "high": 30.174550070081434,
+                    "observations": 248
+                },
+                "9": {
+                    "elevated": 30.261756610870364,
+                    "high": 30.371670968191964,
+                    "observations": 240
+                },
+                "10": {
+                    "elevated": 29.52488331113543,
+                    "high": 29.86314135278975,
+                    "observations": 248
+                },
+                "11": {
+                    "elevated": 25.704276697976244,
+                    "high": 26.140434360504152,
+                    "observations": 240
+                },
+                "12": {
+                    "elevated": 21.969761841637748,
+                    "high": 22.51209213733673,
+                    "observations": 248
+                }
+            }
+        },
+        "imd_temperature_mean_3d_c_spatial_max": {
+            "by_month": {
+                "1": {
+                    "elevated": 20.87146387100219,
+                    "high": 21.377109479904174,
+                    "observations": 279
+                },
+                "2": {
+                    "elevated": 25.952771759033194,
+                    "high": 26.703950913747143,
+                    "observations": 239
+                },
+                "3": {
+                    "elevated": 29.544786135355622,
+                    "high": 29.940879472096757,
+                    "observations": 248
+                },
+                "4": {
+                    "elevated": 32.94770450592041,
+                    "high": 33.378500493367504,
+                    "observations": 240
+                },
+                "5": {
+                    "elevated": 33.48704754511516,
+                    "high": 33.99722797075908,
+                    "observations": 248
+                },
+                "6": {
+                    "elevated": 33.07817395528158,
+                    "high": 33.55287823677062,
+                    "observations": 240
+                },
+                "7": {
+                    "elevated": 31.263835461934402,
+                    "high": 31.545255517959593,
+                    "observations": 248
+                },
+                "8": {
+                    "elevated": 31.174788506825763,
+                    "high": 31.588878870010376,
+                    "observations": 248
+                },
+                "9": {
+                    "elevated": 30.996696186065673,
+                    "high": 31.221352100372307,
+                    "observations": 240
+                },
+                "10": {
+                    "elevated": 30.458680438995362,
+                    "high": 30.71412064234416,
+                    "observations": 248
+                },
+                "11": {
+                    "elevated": 26.833058802286782,
+                    "high": 27.423484659194948,
+                    "observations": 240
+                },
+                "12": {
+                    "elevated": 23.04928245544434,
+                    "high": 23.732419220606484,
+                    "observations": 248
+                }
+            }
+        },
+        "imd_temperature_mean_7d_c_spatial_max": {
+            "by_month": {
+                "1": {
+                    "elevated": 20.45108652114868,
+                    "high": 20.74378893715994,
+                    "observations": 279
+                },
+                "2": {
+                    "elevated": 25.48424301147461,
+                    "high": 26.10470376695905,
+                    "observations": 239
+                },
+                "3": {
+                    "elevated": 29.033004025050577,
+                    "high": 29.441920879908974,
+                    "observations": 248
+                },
+                "4": {
+                    "elevated": 32.39198868615287,
+                    "high": 33.27804343359811,
+                    "observations": 240
+                },
+                "5": {
+                    "elevated": 33.195179734911235,
+                    "high": 33.657772166388376,
+                    "observations": 248
+                },
+                "6": {
+                    "elevated": 32.980451638357984,
+                    "high": 33.1591023172651,
+                    "observations": 240
+                },
+                "7": {
+                    "elevated": 31.039029707227435,
+                    "high": 31.317209400449478,
+                    "observations": 248
+                },
+                "8": {
+                    "elevated": 31.07501186643328,
+                    "high": 31.248076186861315,
+                    "observations": 248
+                },
+                "9": {
+                    "elevated": 30.82291693006243,
+                    "high": 31.04983549799238,
+                    "observations": 240
+                },
+                "10": {
+                    "elevated": 30.307167993273055,
+                    "high": 30.616040563583375,
+                    "observations": 248
+                },
+                "11": {
+                    "elevated": 26.742254843030654,
+                    "high": 27.120860256467545,
+                    "observations": 240
+                },
+                "12": {
+                    "elevated": 22.98744238444737,
+                    "high": 23.735957833698816,
+                    "observations": 248
+                }
+            }
+        },
+        "open_meteo_temperature_mean_3d_c_spatial_median": {
+            "by_month": {
+                "1": {
+                    "elevated": 19.513333333333335,
+                    "high": 20.24666666666666,
+                    "observations": 279
+                },
+                "2": {
+                    "elevated": 24.173333333333336,
+                    "high": 25.203333333333333,
+                    "observations": 239
+                },
+                "3": {
+                    "elevated": 28.4,
+                    "high": 28.821666666666673,
+                    "observations": 248
+                },
+                "4": {
+                    "elevated": 32.03333333333334,
+                    "high": 32.266666666666666,
+                    "observations": 240
+                },
+                "5": {
+                    "elevated": 32.31,
+                    "high": 32.89833333333334,
+                    "observations": 248
+                },
+                "6": {
+                    "elevated": 32.10666666666668,
+                    "high": 32.36833333333334,
+                    "observations": 240
+                },
+                "7": {
+                    "elevated": 30.110000000000003,
+                    "high": 30.633333333333333,
+                    "observations": 248
+                },
+                "8": {
+                    "elevated": 29.96666666666665,
+                    "high": 30.133333333333326,
+                    "observations": 248
+                },
+                "9": {
+                    "elevated": 30.03333333333332,
+                    "high": 30.301666666666666,
+                    "observations": 240
+                },
+                "10": {
+                    "elevated": 29.21,
+                    "high": 29.60000000000001,
+                    "observations": 248
+                },
+                "11": {
+                    "elevated": 25.436666666666657,
+                    "high": 26.271666666666665,
+                    "observations": 240
+                },
+                "12": {
+                    "elevated": 21.53333333333332,
+                    "high": 22.333333333333325,
+                    "observations": 248
+                }
+            }
+        },
+        "open_meteo_temperature_mean_7d_c_spatial_median": {
+            "by_month": {
+                "1": {
+                    "elevated": 19.02,
+                    "high": 19.43428571428571,
+                    "observations": 279
+                },
+                "2": {
+                    "elevated": 23.865714285714287,
+                    "high": 24.374285714285712,
+                    "observations": 239
+                },
+                "3": {
+                    "elevated": 27.87857142857143,
+                    "high": 28.247142857142855,
+                    "observations": 248
+                },
+                "4": {
+                    "elevated": 31.55428571428571,
+                    "high": 32.432857142857145,
+                    "observations": 240
+                },
+                "5": {
+                    "elevated": 32.06,
+                    "high": 32.770714285714284,
+                    "observations": 248
+                },
+                "6": {
+                    "elevated": 31.885714285714283,
+                    "high": 32.345,
+                    "observations": 240
+                },
+                "7": {
+                    "elevated": 29.965714285714284,
+                    "high": 30.423571428571428,
+                    "observations": 248
+                },
+                "8": {
+                    "elevated": 29.637142857142855,
+                    "high": 29.918571428571425,
+                    "observations": 248
+                },
+                "9": {
+                    "elevated": 29.77142857142857,
+                    "high": 30.072142857142854,
+                    "observations": 240
+                },
+                "10": {
+                    "elevated": 29.232857142857146,
+                    "high": 29.571428571428573,
+                    "observations": 248
+                },
+                "11": {
+                    "elevated": 25.47285714285714,
+                    "high": 26.229285714285716,
+                    "observations": 240
+                },
+                "12": {
+                    "elevated": 21.547142857142855,
+                    "high": 22.12857142857143,
+                    "observations": 248
+                }
+            }
+        },
+        "open_meteo_temperature_mean_3d_c_spatial_max": {
+            "by_month": {
+                "1": {
+                    "elevated": 21.673333333333336,
+                    "high": 21.936666666666664,
+                    "observations": 279
+                },
+                "2": {
+                    "elevated": 25.699999999999992,
+                    "high": 26.74333333333332,
+                    "observations": 239
+                },
+                "3": {
+                    "elevated": 29.266666666666666,
+                    "high": 29.833333333333336,
+                    "observations": 248
+                },
+                "4": {
+                    "elevated": 33.336666666666666,
+                    "high": 33.77166666666666,
+                    "observations": 240
+                },
+                "5": {
+                    "elevated": 33.96666666666667,
+                    "high": 34.34333333333334,
+                    "observations": 248
+                },
+                "6": {
+                    "elevated": 33.23333333333334,
+                    "high": 33.73500000000001,
+                    "observations": 240
+                },
+                "7": {
+                    "elevated": 30.676666666666666,
+                    "high": 31.188333333333315,
+                    "observations": 248
+                },
+                "8": {
+                    "elevated": 30.376666666666658,
+                    "high": 30.654999999999998,
+                    "observations": 248
+                },
+                "9": {
+                    "elevated": 30.36666666666665,
+                    "high": 30.69999999999997,
+                    "observations": 240
+                },
+                "10": {
+                    "elevated": 29.79999999999999,
+                    "high": 30.08833333333334,
+                    "observations": 248
+                },
+                "11": {
+                    "elevated": 26.83333333333333,
+                    "high": 27.30833333333333,
+                    "observations": 240
+                },
+                "12": {
+                    "elevated": 23.543333333333333,
+                    "high": 24.321666666666662,
+                    "observations": 248
+                }
+            }
+        },
+        "open_meteo_temperature_mean_7d_c_spatial_max": {
+            "by_month": {
+                "1": {
+                    "elevated": 21.25714285714286,
+                    "high": 21.46142857142857,
+                    "observations": 279
+                },
+                "2": {
+                    "elevated": 25.371428571428574,
+                    "high": 25.94857142857143,
+                    "observations": 239
+                },
+                "3": {
+                    "elevated": 28.59,
+                    "high": 29.017857142857142,
+                    "observations": 248
+                },
+                "4": {
+                    "elevated": 32.591428571428565,
+                    "high": 33.67857142857142,
+                    "observations": 240
+                },
+                "5": {
+                    "elevated": 33.698571428571434,
+                    "high": 33.971428571428575,
+                    "observations": 248
+                },
+                "6": {
+                    "elevated": 33.14714285714286,
+                    "high": 33.77214285714285,
+                    "observations": 240
+                },
+                "7": {
+                    "elevated": 30.29,
+                    "high": 30.778571428571425,
+                    "observations": 248
+                },
+                "8": {
+                    "elevated": 30.071428571428573,
+                    "high": 30.32857142857143,
+                    "observations": 248
+                },
+                "9": {
+                    "elevated": 30.15714285714285,
+                    "high": 30.329285714285714,
+                    "observations": 240
+                },
+                "10": {
+                    "elevated": 29.737142857142857,
+                    "high": 30.056428571428572,
+                    "observations": 248
+                },
+                "11": {
+                    "elevated": 26.75142857142857,
+                    "high": 27.144285714285715,
+                    "observations": 240
+                },
+                "12": {
+                    "elevated": 23.785714285714285,
+                    "high": 24.184999999999995,
+                    "observations": 248
+                }
+            }
+        }
+    },
+    "rainfall": {
+        "imd_rainfall_3d_mm_spatial_max": {
+            "overall": {
+                "elevated": 146.80949541926384,
+                "high": 203.08810901641843,
+                "observations": 2966
+            }
+        },
+        "imd_rainfall_7d_mm_spatial_max": {
+            "overall": {
+                "elevated": 282.1898854374886,
+                "high": 366.204540759325,
+                "observations": 2966
+            }
+        },
+        "imd_rainfall_14d_mm_spatial_max": {
+            "overall": {
+                "elevated": 494.06448762863874,
+                "high": 665.6776216030121,
+                "observations": 2966
+            }
+        },
+        "open_meteo_rainfall_3d_mm_spatial_max": {
+            "overall": {
+                "elevated": 95.29999999999994,
+                "high": 137.52499999999998,
+                "observations": 2966
+            }
+        },
+        "open_meteo_rainfall_7d_mm_spatial_max": {
+            "overall": {
+                "elevated": 200.39999999999992,
+                "high": 283.2,
+                "observations": 2966
+            }
+        },
+        "open_meteo_rainfall_14d_mm_spatial_max": {
+            "overall": {
+                "elevated": 369.15,
+                "high": 486.0749999999999,
+                "observations": 2966
+            }
+        }
+    },
+    "humidity": {
+        "open_meteo_humidity_mean_7d_pct_spatial_max": {
+            "overall": {
+                "elevated": 91.28571428571428,
+                "high": 92.71428571428572,
+                "observations": 2966
+            }
+        }
+    },
+    "wind": {
+        "open_meteo_wind_speed_max_7d_spatial_max": {
+            "overall": {
+                "elevated": 22.7,
+                "high": 24.3,
+                "observations": 2966
+            }
+        },
+        "open_meteo_wind_speed_mean_7d_spatial_max": {
+            "overall": {
+                "elevated": 16.72142857142857,
+                "high": 18.553571428571427,
+                "observations": 2966
+            }
+        }
+    },
+    "pressure_drop": {
+        "open_meteo_pressure_change_1d_hpa_spatial_median": {
+            "overall": {
+                "elevated": -1.6000000000000227,
+                "high": -2.0,
+                "observations": 2966
+            }
+        },
+        "open_meteo_pressure_change_1d_hpa_spatial_max": {
+            "overall": {
+                "elevated": -1.2000000000000457,
+                "high": -1.6999999999999318,
+                "observations": 2966
+            }
+        }
+    }
+}

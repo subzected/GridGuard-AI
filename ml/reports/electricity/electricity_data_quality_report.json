@@ -1,0 +1,91 @@
+{
+  "geography": "West Bengal",
+  "frequency": "daily",
+  "targets": {
+    "energy_MU": "Daily energy supplied, MU (million units)",
+    "peak_demand_MW": "Daily peak demand met, MW"
+  },
+  "energy_source_report": {
+    "source_file": "corrected_daily_energy_met_MU.csv",
+    "target": "daily_energy_supplied_MU",
+    "original_rows": 3955,
+    "invalid_date_rows_removed": 0,
+    "missing_or_invalid_target_rows_removed": 0,
+    "exact_duplicate_rows_removed": 49,
+    "conflicting_dates_excluded": [
+      "2014-04-28",
+      "2015-04-05",
+      "2016-05-26",
+      "2016-10-01",
+      "2017-04-14",
+      "2019-02-25"
+    ],
+    "clean_rows": 3894,
+    "start_date": "2013-01-01",
+    "end_date": "2024-04-28",
+    "missing_target_values": 0
+  },
+  "peak_source_report": {
+    "source_file": "corrected_peak_met_MW.csv",
+    "target": "daily_peak_demand_met_MW",
+    "original_rows": 3955,
+    "invalid_date_rows_removed": 0,
+    "missing_or_invalid_target_rows_removed": 0,
+    "exact_duplicate_rows_removed": 49,
+    "conflicting_dates_excluded": [
+      "2014-04-28",
+      "2015-04-05",
+      "2016-05-26",
+      "2016-10-01",
+      "2017-04-14",
+      "2019-02-25"
+    ],
+    "clean_rows": 3894,
+    "start_date": "2013-01-01",
+    "end_date": "2024-04-28",
+    "missing_target_values": 0
+  },
+  "combined_rows": 3894,
+  "combined_start_date": "2013-01-01",
+  "combined_end_date": "2024-04-28",
+  "combined_missing_values": {
+    "date": 0,
+    "energy_MU": 0,
+    "peak_demand_MW": 0
+  },
+  "missing_calendar_days": 242,
+  "missing_calendar_date_examples": [
+    "2013-01-08",
+    "2013-01-09",
+    "2013-01-10",
+    "2013-01-11",
+    "2013-01-12",
+    "2013-01-13",
+    "2013-01-14",
+    "2013-01-15",
+    "2013-01-16",
+    "2013-01-17",
+    "2013-01-18",
+    "2013-01-19",
+    "2013-01-20",
+    "2013-01-21",
+    "2013-01-22",
+    "2013-01-23",
+    "2013-01-24",
+    "2013-01-25",
+    "2013-01-26",
+    "2013-01-27",
+    "2013-01-28",
+    "2013-01-29",
+    "2013-01-30",
+    "2013-01-31",
+    "2013-02-01",
+    "2013-02-02",
+    "2013-02-03",
+    "2013-02-04",
+    "2013-02-05",
+    "2013-02-06"
+  ],
+  "merge": "inner join on date; only dates present in both cleaned targets retained",
+  "duplicate_policy": "Exact duplicates removed; dates with conflicting West Bengal target values excluded, not averaged."
+}

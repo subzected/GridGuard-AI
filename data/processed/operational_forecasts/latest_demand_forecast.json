@@ -1,0 +1,70 @@
+{
+  "project": "GridGuard AI",
+  "forecast_type": "one_day_ahead_daily_demand",
+  "generated_at_utc": "2026-11-10T15:03:08.742118+00:00",
+  "forecast_date": "2024-04-29",
+  "latest_observed_demand_date": "2024-04-28",
+  "history_age_days": 926,
+  "data_status": "stale_historical_demo",
+  "forecasts": {
+    "energy_MU": {
+      "target": "energy_MU",
+      "unit": "MU",
+      "forecast_value": 253.939,
+      "previous_day_actual": 248.9,
+      "predicted_change": 5.039,
+      "predicted_change_pct": 2.025,
+      "demand_pressure_category": "critical",
+      "model_name": "LightGBM",
+      "model_file": "energy_mu_lightgbm_delta.joblib"
+    },
+    "peak_demand_MW": {
+      "target": "peak_demand_MW",
+      "unit": "MW",
+      "forecast_value": 12346.702,
+      "previous_day_actual": 12313.0,
+      "predicted_change": 33.702,
+      "predicted_change_pct": 0.274,
+      "demand_pressure_category": "critical",
+      "model_name": "XGBoost",
+      "model_file": "peak_demand_mw_xgboost_delta.joblib"
+    }
+  },
+  "risk_assessment": {
+    "primary_demand_risk_category": "critical",
+    "energy_pressure_category": "critical",
+    "peak_pressure_category": "critical",
+    "weather_context_category": "not_assessed",
+    "weather_context_status": "No point-in-time future weather forecast snapshot has been connected to this inference module.",
+    "interpretation": "Demand category is based on fixed training-period P80/P90/P95 percentiles. It is statistical demand pressure, not a physical grid-overload or reserve-margin assessment.",
+    "weather_escalation_applied": false
+  },
+  "feature_diagnostics": {
+    "energy_MU": {
+      "feature_count": 96,
+      "missing_feature_count_before_model_imputation": 0,
+      "missing_feature_names": [],
+      "historical_weather_feature_count": 52,
+      "historical_weather_non_null_count": 52,
+      "weather_feature_policy": "latest_available_historical_feature_row_carried_forward; not a forecast",
+      "weather_feature_source_date": "2024-04-28"
+    },
+    "peak_demand_MW": {
+      "feature_count": 96,
+      "missing_feature_count_before_model_imputation": 0,
+      "missing_feature_names": [],
+      "historical_weather_feature_count": 52,
+      "historical_weather_non_null_count": 52,
+      "weather_feature_policy": "latest_available_historical_feature_row_carried_forward; not a forecast",
+      "weather_feature_source_date": "2024-04-28"
+    }
+  },
+  "limitations": [
+    "The models predict one day ahead, not multiple days recursively.",
+    "The model bundles were trained with historical weather predictors.",
+    "For this first inference build, the latest historical weather feature row is carried forward; it is not a weather forecast.",
+    "Weather context remains not_assessed until point-in-time forecast snapshots with fetched_at and valid_time are integrated.",
+    "Forecast quality depends on refreshing observed electricity demand and rebuilding the fused feature dataset.",
+    "P80/P90/P95 categories are statistical demand-pressure labels, not verified physical grid stress."
+  ]
+}

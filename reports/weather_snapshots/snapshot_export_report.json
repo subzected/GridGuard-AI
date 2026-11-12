@@ -1,0 +1,63 @@
+{
+    "project": "GridGuard AI",
+    "report_type": "Weather Snapshot Export",
+    "source_table": "weather_records",
+    "raw_database_rows": 1080,
+    "exported_snapshot_rows": 15,
+    "locations": 15,
+    "location_ids": [
+        "asansol",
+        "bankura",
+        "bardhaman",
+        "berhampore",
+        "cooch_behar",
+        "darjeeling",
+        "durgapur",
+        "haldia",
+        "howrah",
+        "kharagpur",
+        "kolkata",
+        "krishnanagar",
+        "malda",
+        "purulia",
+        "siliguri"
+    ],
+    "first_snapshot_time": "2026-11-09T15:06:06+00:00",
+    "last_snapshot_time": "2026-11-09T15:06:15+00:00",
+    "duplicate_snapshot_keys": 0,
+    "forecast_valid_time_offset_minutes": {
+        "minimum": -6.25,
+        "median": -6.183333333333334,
+        "maximum": -6.1
+    },
+    "missing_percentage": {
+        "temp_c": 0.0,
+        "humidity_pct": 0.0,
+        "precipitation_mm": 0.0,
+        "rain_mm": 0.0,
+        "wind_speed_kmh": 0.0,
+        "wind_gusts_kmh": 0.0,
+        "wind_direction_deg": 0.0,
+        "pressure_hpa": 0.0,
+        "precipitation_probability_pct": 0.0,
+        "thunderstorm_probability_pct": 100.0
+    },
+    "source_counts": {
+        "open-meteo": 15
+    },
+    "temporal_resolution_counts": {
+        "hourly": 15
+    },
+    "timestamp_policy": {
+        "snapshot_time": "fetched_at",
+        "forecast_valid_time": "valid_time",
+        "fetch_batch_rounding": "1min",
+        "max_valid_time_distance_minutes": 90
+    },
+    "notes": [
+        "One forecast row selected per location and fetch batch.",
+        "No artificial 15-minute snapshots are created.",
+        "Cloud cover is not present in the confirmed MySQL schema.",
+        "Missing weather values are preserved; no imputation is performed."
+    ]
+}

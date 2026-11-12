@@ -1,0 +1,97 @@
+feature,gain_importance,split_importance,gain_importance_pct,split_importance_pct,target,feature_group
+peak_demand_MW_lag_1d,30439673625.0,471.0,68.71935816074068,5.607142857142857,peak_demand_MW,Demand history
+energy_MU_lag_1d,4403508099.0,251.0,9.941179197479103,2.988095238095238,peak_demand_MW,Demand history
+peak_demand_MW_lag_7d,1533554455.0,151.0,3.462089612077583,1.7976190476190474,peak_demand_MW,Demand history
+day_of_week,860135967.0,306.0,1.9418076655941159,3.642857142857143,peak_demand_MW,Calendar
+peak_demand_MW_lag_14d,778410148.0,197.0,1.7573068100321054,2.3452380952380953,peak_demand_MW,Demand history
+peak_demand_MW_rolling_mean_7d,650993008.0,69.0,1.4696551030083498,0.8214285714285714,peak_demand_MW,Demand history
+energy_MU_lag_14d,272918971.0,160.0,0.6161306703895318,1.9047619047619049,peak_demand_MW,Demand history
+peak_demand_MW_lag_28d,206139888.0,167.0,0.46537295271959317,1.9880952380952381,peak_demand_MW,Demand history
+energy_MU_rolling_mean_7d,181162285.0,48.0,0.4089845410795918,0.5714285714285714,peak_demand_MW,Demand history
+open_meteo_temperature_mean_3d_c_spatial_max,158876917.0,67.0,0.35867400870653293,0.7976190476190477,peak_demand_MW,Weather
+energy_MU_change_7d_pct,157287263.0,185.0,0.35508527106356635,2.2023809523809526,peak_demand_MW,Demand history
+energy_MU_lag_7d,157262279.0,116.0,0.35502886821032165,1.380952380952381,peak_demand_MW,Demand history
+open_meteo_temperature_change_3d_c_spatial_median,154977775.0,166.0,0.3498714657187683,1.9761904761904763,peak_demand_MW,Weather
+energy_MU_lag_28d,149621887.0,152.0,0.33778023273529334,1.8095238095238095,peak_demand_MW,Demand history
+open_meteo_pressure_change_1d_hpa_spatial_median,145528160.0,207.0,0.32853840263583234,2.4642857142857144,peak_demand_MW,Weather
+energy_MU_change_1d_pct,143735491.0,199.0,0.32449134665907314,2.369047619047619,peak_demand_MW,Demand history
+peak_demand_MW_change_1d_pct,140105380.0,250.0,0.31629615701790154,2.976190476190476,peak_demand_MW,Demand history
+peak_demand_MW_change_7d_pct,132600098.0,188.0,0.29935254033497594,2.238095238095238,peak_demand_MW,Demand history
+open_meteo_pressure_change_1d_hpa_spatial_max,123738419.0,176.0,0.2793467774411724,2.0952380952380953,peak_demand_MW,Weather
+day_of_year_cos,122067414.0,85.0,0.27557438511863847,1.0119047619047619,peak_demand_MW,Calendar
+day_of_year,109002111.0,108.0,0.24607869316751954,1.2857142857142856,peak_demand_MW,Calendar
+day_of_year_sin,106458558.0,133.0,0.2403364722829871,1.5833333333333335,peak_demand_MW,Calendar
+open_meteo_rainfall_3d_mm_spatial_median,100917936.0,162.0,0.22782819140120483,1.9285714285714284,peak_demand_MW,Weather
+open_meteo_rainfall_3d_mm_spatial_max,99345728.0,147.0,0.22427883913198576,1.7500000000000002,peak_demand_MW,Weather
+peak_demand_MW_rolling_max_7d,97712800.0,57.0,0.2205924078822584,0.6785714285714286,peak_demand_MW,Demand history
+imd_temperature_mean_3d_c_spatial_max,97622542.0,78.0,0.22038864512496725,0.9285714285714286,peak_demand_MW,Weather
+day_of_month,87991441.0,155.0,0.1986458666952505,1.8452380952380953,peak_demand_MW,Calendar
+imd_temperature_change_3d_c_spatial_median,86536632.0,128.0,0.19536154959126023,1.5238095238095237,peak_demand_MW,Weather
+imd_rainfall_3d_mm_spatial_median,84937651.0,113.0,0.19175175569580352,1.3452380952380951,peak_demand_MW,Weather
+open_meteo_pressure_mean_7d_hpa_spatial_median,84932797.0,135.0,0.19174079750457515,1.607142857142857,peak_demand_MW,Weather
+open_meteo_wind_speed_mean_7d_spatial_max,84205910.0,131.0,0.19009980723934572,1.5595238095238095,peak_demand_MW,Weather
+open_meteo_wind_speed_max_7d_spatial_max,82750968.0,119.0,0.18681518988001275,1.4166666666666665,peak_demand_MW,Weather
+imd_rainfall_3d_mm_spatial_max,82731425.0,138.0,0.18677107040511037,1.6428571428571428,peak_demand_MW,Weather
+open_meteo_temperature_change_3d_c_spatial_max,78925203.0,121.0,0.17817829979660846,1.4404761904761905,peak_demand_MW,Weather
+peak_demand_MW_rolling_std_7d,78921601.0,139.0,0.17817016806920744,1.6547619047619047,peak_demand_MW,Demand history
+imd_temperature_change_3d_c_spatial_max,77243800.0,112.0,0.17438243337593018,1.3333333333333335,peak_demand_MW,Weather
+open_meteo_pressure_mean_7d_hpa_spatial_max,76483494.0,116.0,0.17266599774756491,1.380952380952381,peak_demand_MW,Weather
+open_meteo_wind_speed_max_7d_spatial_median,73942658.0,136.0,0.16692991065074725,1.6190476190476188,peak_demand_MW,Weather
+imd_rainfall_14d_mm_spatial_max,73895753.0,104.0,0.16682401984737535,1.2380952380952381,peak_demand_MW,Weather
+open_meteo_humidity_mean_7d_pct_spatial_max,67806388.0,107.0,0.15307691928507494,1.2738095238095237,peak_demand_MW,Weather
+is_weekend,60440765.0,15.0,0.13644859102999532,0.17857142857142858,peak_demand_MW,Calendar
+peak_demand_MW_rolling_min_7d,60136323.0,64.0,0.1357612952628032,0.7619047619047619,peak_demand_MW,Demand history
+open_meteo_wind_speed_mean_7d_spatial_median,59607216.0,104.0,0.13456680501017143,1.2380952380952381,peak_demand_MW,Weather
+imd_rainfall_7d_mm_spatial_max,58947253.0,92.0,0.13307689962128483,1.0952380952380953,peak_demand_MW,Weather
+week_of_year,58616934.0,61.0,0.13233118500068997,0.7261904761904762,peak_demand_MW,Calendar
+open_meteo_consecutive_wet_days_spatial_max,57655280.0,84.0,0.1301601943893309,1.0,peak_demand_MW,Weather
+energy_MU_rolling_min_7d,55873580.0,51.0,0.12613790157688648,0.6071428571428571,peak_demand_MW,Demand history
+open_meteo_rainfall_14d_mm_spatial_max,54504218.0,73.0,0.12304648611399457,0.8690476190476191,peak_demand_MW,Weather
+open_meteo_humidity_mean_7d_pct_spatial_median,54368973.0,91.0,0.12274116255143128,1.0833333333333335,peak_demand_MW,Weather
+energy_MU_rolling_std_7d,52238217.0,89.0,0.11793085523601743,1.0595238095238095,peak_demand_MW,Demand history
+imd_rainfall_14d_mm_spatial_median,52191890.0,80.0,0.11782626930172876,0.9523809523809524,peak_demand_MW,Weather
+open_meteo_rainfall_7d_mm_spatial_max,51255263.0,92.0,0.11571177861865002,1.0952380952380953,peak_demand_MW,Weather
+peak_demand_MW_rolling_std_14d,49044401.0,94.0,0.1107206272845834,1.119047619047619,peak_demand_MW,Demand history
+open_meteo_temperature_mean_7d_c_spatial_median,47551959.0,76.0,0.10735135146396815,0.9047619047619048,peak_demand_MW,Weather
+imd_temperature_mean_7d_c_spatial_max,47247185.0,58.0,0.10666330618719883,0.6904761904761905,peak_demand_MW,Weather
+open_meteo_temperature_mean_3d_c_spatial_median,47087356.0,57.0,0.10630248279497781,0.6785714285714286,peak_demand_MW,Weather
+open_meteo_temperature_mean_7d_c_spatial_max,46703569.0,61.0,0.10543606101150718,0.7261904761904762,peak_demand_MW,Weather
+energy_MU_rolling_std_14d,43677467.0,81.0,0.09860445730475312,0.9642857142857142,peak_demand_MW,Demand history
+open_meteo_rainfall_7d_mm_spatial_median,43008003.0,70.0,0.09709310284811604,0.8333333333333334,peak_demand_MW,Weather
+imd_wet_days_14d_spatial_max,40362778.0,47.0,0.09112135142823709,0.5595238095238095,peak_demand_MW,Weather
+imd_temperature_mean_7d_c_spatial_median,39764458.0,64.0,0.08977060874678582,0.7619047619047619,peak_demand_MW,Weather
+energy_MU_rolling_max_14d,35660376.0,31.0,0.08050540162421604,0.36904761904761907,peak_demand_MW,Demand history
+open_meteo_consecutive_wet_days_spatial_median,34559837.0,45.0,0.07802086993565188,0.5357142857142857,peak_demand_MW,Weather
+peak_demand_MW_rolling_max_14d,34217156.0,41.0,0.07724724737110046,0.4880952380952381,peak_demand_MW,Demand history
+open_meteo_rainfall_14d_mm_spatial_median,33019090.0,55.0,0.0745425427291102,0.6547619047619048,peak_demand_MW,Weather
+peak_demand_MW_rolling_std_30d,30469027.0,54.0,0.06878562513569915,0.6428571428571428,peak_demand_MW,Demand history
+peak_demand_MW_rolling_min_30d,29790444.0,31.0,0.06725368399883717,0.36904761904761907,peak_demand_MW,Demand history
+imd_rainfall_7d_mm_spatial_median,29504925.0,53.0,0.06660910801998758,0.6309523809523809,peak_demand_MW,Weather
+imd_temperature_mean_3d_c_spatial_median,29084290.0,42.0,0.06565949970368148,0.5,peak_demand_MW,Weather
+imd_consecutive_wet_days_spatial_median,29050938.0,49.0,0.0655842055969965,0.5833333333333334,peak_demand_MW,Weather
+peak_demand_MW_rolling_mean_14d,28160148.0,24.0,0.06357319464431234,0.2857142857142857,peak_demand_MW,Demand history
+peak_demand_MW_rolling_min_14d,23144105.0,41.0,0.05224918178815688,0.4880952380952381,peak_demand_MW,Demand history
+energy_MU_rolling_std_30d,22874802.0,44.0,0.05164121438552472,0.5238095238095238,peak_demand_MW,Demand history
+energy_MU_rolling_max_7d,20655093.0,32.0,0.046630090427272376,0.38095238095238093,peak_demand_MW,Demand history
+energy_MU_rolling_min_14d,20640586.0,44.0,0.04659734001933044,0.5238095238095238,peak_demand_MW,Demand history
+peak_demand_MW_rolling_max_30d,19249694.0,28.0,0.04345731931186765,0.33333333333333337,peak_demand_MW,Demand history
+energy_MU_rolling_mean_14d,16636007.0,22.0,0.03755676678670661,0.2619047619047619,peak_demand_MW,Demand history
+imd_consecutive_wet_days_spatial_max,15508469.0,23.0,0.035011283263578157,0.27380952380952384,peak_demand_MW,Weather
+imd_wet_days_14d_spatial_median,13975138.0,20.0,0.031549698114339664,0.2380952380952381,peak_demand_MW,Weather
+open_meteo_wet_days_14d_spatial_median,12997790.0,16.0,0.029343277372544222,0.19047619047619047,peak_demand_MW,Weather
+peak_demand_MW_rolling_mean_30d,12599743.0,25.0,0.028444662798196654,0.2976190476190476,peak_demand_MW,Demand history
+open_meteo_wet_days_14d_spatial_max,11301642.0,16.0,0.025514123244889744,0.19047619047619047,peak_demand_MW,Weather
+imd_wet_days_7d_spatial_max,10919153.0,15.0,0.024650631772958974,0.17857142857142858,peak_demand_MW,Weather
+open_meteo_wet_days_7d_spatial_max,9132932.0,14.0,0.020618132536422352,0.16666666666666669,peak_demand_MW,Weather
+energy_MU_rolling_max_30d,7999287.0,8.0,0.018058862100679206,0.09523809523809523,peak_demand_MW,Demand history
+imd_wet_days_3d_spatial_max,7667393.0,10.0,0.017309591824710507,0.11904761904761905,peak_demand_MW,Weather
+energy_MU_rolling_min_30d,7157933.0,18.0,0.01615945583311375,0.2142857142857143,peak_demand_MW,Demand history
+energy_MU_rolling_mean_30d,6348111.0,13.0,0.014331234914912387,0.15476190476190477,peak_demand_MW,Demand history
+open_meteo_wet_days_7d_spatial_median,5455909.0,11.0,0.012317036288966077,0.13095238095238096,peak_demand_MW,Weather
+month,5112875.0,7.0,0.011542616806099118,0.08333333333333334,peak_demand_MW,Calendar
+open_meteo_wet_days_3d_spatial_median,2485891.0,4.0,0.005612045519346853,0.047619047619047616,peak_demand_MW,Weather
+imd_wet_days_7d_spatial_median,2392064.0,4.0,0.005400225534100615,0.047619047619047616,peak_demand_MW,Weather
+imd_wet_days_3d_spatial_median,1787164.0,3.0,0.004034628114642999,0.03571428571428571,peak_demand_MW,Weather
+open_meteo_wet_days_3d_spatial_max,1127424.0,3.0,0.0025452261614061543,0.03571428571428571,peak_demand_MW,Weather
+imd_location_count,0.0,0.0,0.0,0.0,peak_demand_MW,Weather
+open_meteo_location_count,0.0,0.0,0.0,0.0,peak_demand_MW,Weather

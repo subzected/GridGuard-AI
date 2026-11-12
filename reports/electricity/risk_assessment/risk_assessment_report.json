@@ -1,0 +1,42 @@
+{
+    "project": "GridGuard AI",
+    "module": "risk_assessment_engine",
+    "design": {
+        "primary_signal": "historical demand pressure",
+        "secondary_signal": "independent weather context",
+        "weather_escalates_demand_category": false,
+        "heat_demand_coincidence_is_causal": false
+    },
+    "dataset": {
+        "rows": 4136,
+        "date_min": "2013-01-01",
+        "date_max": "2024-04-28",
+        "valid_demand_days": 3894,
+        "valid_weather_context_days": 4136
+    },
+    "primary_risk_distribution": {
+        "normal": 2540,
+        "critical": 638,
+        "elevated": 453,
+        "high": 263,
+        "unknown": 242
+    },
+    "weather_context_distribution": {
+        "normal": 1953,
+        "high": 1434,
+        "elevated": 749
+    },
+    "coincidence": {
+        "elevated_demand_and_elevated_or_high_heat_days": 484,
+        "high_or_critical_demand_and_elevated_or_high_heat_days": 360,
+        "heat_demand_coincidence_rate_among_valid_demand_days_pct": 12.429378531073446
+    },
+    "limitations": [
+        "No available-capacity, reserve-margin, or official grid-stress labels are available.",
+        "Demand categories are statistical historical percentile categories.",
+        "Weather is contextual and does not automatically escalate demand pressure.",
+        "Heat-demand coincidence is observational and does not prove causation.",
+        "Weather features are historical prior-only summaries, not live forecasts.",
+        "Weather locations are not feeder-level measurements."
+    ]
+}

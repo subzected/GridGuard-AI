@@ -1,0 +1,53 @@
+{
+    "project": "GridGuard AI",
+    "module": "historical_demand_pressure_classifier",
+    "interpretation": "Statistical demand-pressure classification only. It does not establish physical grid overload or insufficient reserve.",
+    "threshold_method": "training_period_actual_demand_percentiles",
+    "training_end_date": "2021-02-13",
+    "percentile_definitions": {
+        "elevated": 80,
+        "high": 90,
+        "critical": 95
+    },
+    "thresholds": {
+        "energy": {
+            "p80": 152.7,
+            "p90": 164.3,
+            "p95": 172.3,
+            "training_min": 51.5,
+            "training_max": 198.5,
+            "training_mean": 133.2948741335279,
+            "training_observations": 2741
+        },
+        "peak_demand": {
+            "p80": 7859.0,
+            "p90": 8304.0,
+            "p95": 8596.0,
+            "training_min": 2966.0,
+            "training_max": 9989.0,
+            "training_mean": 7054.854797519153,
+            "training_observations": 2741
+        }
+    },
+    "dataset": {
+        "input_path": "F:\\powergrid-ai\\data\\processed\\west_bengal_demand_weather_dataset.csv",
+        "total_rows": 4136,
+        "training_rows_with_valid_targets": 2741,
+        "date_min": "2013-01-01",
+        "date_max": "2024-04-28"
+    },
+    "label_counts": {
+        "normal": 2540,
+        "critical": 638,
+        "elevated": 453,
+        "high": 263,
+        "unknown": 242
+    },
+    "limitations": [
+        "No official available-capacity or reserve-margin data was supplied.",
+        "Labels represent relative demand pressure, not verified grid stress.",
+        "Energy and peak thresholds are based only on the training period.",
+        "Weather variables are not used in this first-stage classifier.",
+        "Unknown target values remain unclassified."
+    ]
+}

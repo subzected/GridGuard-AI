@@ -1,0 +1,2 @@
+generated_at_utc,forecast_date,latest_observed_demand_date,history_age_days,data_status,energy_forecast_MU,energy_change_MU,energy_pressure,peak_forecast_MW,peak_change_MW,peak_pressure,primary_demand_risk,weather_context,weather_escalation_applied
+2026-11-10T15:03:08.742118+00:00,2024-04-29,2024-04-28,926,stale_historical_demo,253.939,5.039,critical,12346.702,33.702,critical,critical,not_assessed,False

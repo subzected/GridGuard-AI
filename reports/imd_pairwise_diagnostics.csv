@@ -1,0 +1,6 @@
+pair,exact_days,within_0.1C,mean_abs_diff,max_abs_diff,std_diff
+asansol-purulia,5844,5844,0.0,0.0,0.0
+bankura-bardhaman,5844,5844,0.0,0.0,0.0
+bankura-durgapur,5844,5844,0.0,0.0,0.0
+haldia-howrah,5844,5844,0.0,0.0,0.0
+darjeeling-siliguri,18,1539,0.173,1.035,0.162

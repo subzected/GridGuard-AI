@@ -1,0 +1,79 @@
+{
+    "project": "GridGuard AI",
+    "report_type": "Weather Data Cleaning",
+    "generated_at": "2026-11-09T22:16:41",
+    "imd": {
+        "source": "IMD",
+        "original_records": 87660,
+        "output_records": 87660,
+        "locations": 15,
+        "invalid_dates": 0,
+        "duplicate_location_date_keys": 0,
+        "missing_temperature": 0,
+        "missing_precipitation": 0,
+        "invalid_temperature": 0,
+        "invalid_precipitation": 0,
+        "invalid_humidity": 0,
+        "invalid_wind": 0,
+        "invalid_pressure": 0,
+        "temperature_outliers": 3,
+        "precipitation_outliers": 15773,
+        "duplicate_temperature_locations": [
+            "asansol",
+            "bankura",
+            "bardhaman",
+            "durgapur",
+            "haldia",
+            "howrah",
+            "kolkata",
+            "purulia"
+        ],
+        "rows_with_data_quality_issues": 0,
+        "rows_requiring_review": 63664,
+        "rows_with_any_quality_flags": 63664,
+        "rows_removed": 0
+    },
+    "openmeteo": {
+        "source": "OPEN_METEO",
+        "original_records": 40908,
+        "output_records": 40908,
+        "locations": 7,
+        "invalid_dates": 0,
+        "duplicate_location_date_keys": 0,
+        "missing_temperature": 0,
+        "missing_precipitation": 0,
+        "invalid_temperature": 0,
+        "invalid_precipitation": 0,
+        "invalid_humidity": 0,
+        "invalid_wind": 0,
+        "invalid_pressure": 0,
+        "temperature_outliers": 8,
+        "precipitation_outliers": 4744,
+        "duplicate_temperature_locations": [],
+        "rows_with_data_quality_issues": 0,
+        "rows_requiring_review": 25666,
+        "rows_with_any_quality_flags": 25666,
+        "rows_removed": 0
+    },
+    "combined": {
+        "records": 128568,
+        "locations": 15,
+        "sources": [
+            "IMD",
+            "OPEN_METEO"
+        ],
+        "rows_with_data_quality_issues": 0,
+        "rows_requiring_review": 89330,
+        "rows_with_any_quality_flags": 89330
+    },
+    "cleaning_policy": [
+        "Raw datasets were not modified.",
+        "No observations were automatically deleted.",
+        "Missing values were not automatically imputed.",
+        "IMD and Open-Meteo observations remain separate.",
+        "Statistical outliers were flagged, not removed.",
+        "Duplicate temperature series are treated as spatial redundancy.",
+        "Source comparison flags describe location-level agreement, not individual source validity.",
+        "Physical screening ranges are broad diagnostics, not official meteorological standards."
+    ]
+}

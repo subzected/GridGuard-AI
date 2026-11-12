@@ -1,0 +1,59 @@
+{
+    "project": "GridGuard AI",
+    "report_type": "Weather Quality Control",
+    "generated_at": "2026-11-09T20:23:58",
+    "datasets": {
+        "imd": {
+            "file": "data\\raw\\imd_daily_weather_2010_2025.csv",
+            "records": 87660,
+            "locations": 15,
+            "date_start": "2010-01-01",
+            "date_end": "2025-12-31",
+            "invalid_dates": 0,
+            "duplicate_location_date_keys": 0,
+            "missing_values_by_column": {}
+        },
+        "openmeteo": {
+            "file": "data\\raw\\open_meteo\\openmeteo_historical_all.csv",
+            "records": 40908,
+            "locations": 7,
+            "date_start": "2010-01-01",
+            "date_end": "2025-12-31",
+            "invalid_dates": 0,
+            "duplicate_location_date_keys": 0,
+            "missing_values_by_column": {}
+        }
+    },
+    "spatial_validation": {
+        "locations_checked": 15,
+        "good_locations": 0,
+        "review_locations": 0,
+        "warning_locations": 0,
+        "shared_imd_grid_groups": 1,
+        "locations_in_shared_imd_grids": 2
+    },
+    "duplicate_detection": {
+        "exact_temperature_duplicate_pairs": 7,
+        "near_duplicate_temperature_pairs": 0
+    },
+    "source_comparison": {
+        "locations_compared": 7,
+        "temperature_review_locations": [
+            "darjeeling",
+            "siliguri"
+        ],
+        "precipitation_review_locations": [
+            "darjeeling",
+            "howrah",
+            "kolkata",
+            "siliguri"
+        ]
+    },
+    "important_notes": [
+        "High correlation does not prove measurement agreement.",
+        "Exact duplicate series are flagged, not automatically removed.",
+        "IMD and Open-Meteo measurements remain source-specific.",
+        "Quality thresholds are diagnostic and should be validated.",
+        "Shared weather grids must not be counted as independent observations."
+    ]
+}

@@ -1,0 +1,284 @@
+{
+  "created_at_utc": "2026-11-10T10:28:46.564856+00:00",
+  "experiment": "one-day-ahead demand-change prediction",
+  "target_definition": "delta_t = demand_t - demand_(t-1); level_prediction_t = demand_(t-1) + predicted_delta_t",
+  "protocol": {
+    "split": "chronological 70/15/15",
+    "split_basis": "rows with both targets and both previous-day lag features available",
+    "selection_metric": "reconstructed demand-level validation MAE",
+    "final_fit": "train + validation",
+    "test_policy": "single final evaluation after validation selection",
+    "imputation": "median fitted inside each model pipeline",
+    "forecast_horizon": "one day ahead"
+  },
+  "dataset": {
+    "source": "F:\\powergrid-ai\\data\\processed\\west_bengal_demand_weather_dataset.csv",
+    "raw_rows": 4136,
+    "usable_rows": 3798,
+    "feature_count": 96,
+    "features": [
+      "day_of_week",
+      "day_of_month",
+      "month",
+      "day_of_year",
+      "week_of_year",
+      "is_weekend",
+      "day_of_year_sin",
+      "day_of_year_cos",
+      "energy_MU_lag_1d",
+      "energy_MU_lag_7d",
+      "energy_MU_lag_14d",
+      "energy_MU_lag_28d",
+      "energy_MU_rolling_mean_7d",
+      "energy_MU_rolling_std_7d",
+      "energy_MU_rolling_min_7d",
+      "energy_MU_rolling_max_7d",
+      "energy_MU_rolling_mean_14d",
+      "energy_MU_rolling_std_14d",
+      "energy_MU_rolling_min_14d",
+      "energy_MU_rolling_max_14d",
+      "energy_MU_rolling_mean_30d",
+      "energy_MU_rolling_std_30d",
+      "energy_MU_rolling_min_30d",
+      "energy_MU_rolling_max_30d",
+      "energy_MU_change_1d_pct",
+      "energy_MU_change_7d_pct",
+      "peak_demand_MW_lag_1d",
+      "peak_demand_MW_lag_7d",
+      "peak_demand_MW_lag_14d",
+      "peak_demand_MW_lag_28d",
+      "peak_demand_MW_rolling_mean_7d",
+      "peak_demand_MW_rolling_std_7d",
+      "peak_demand_MW_rolling_min_7d",
+      "peak_demand_MW_rolling_max_7d",
+      "peak_demand_MW_rolling_mean_14d",
+      "peak_demand_MW_rolling_std_14d",
+      "peak_demand_MW_rolling_min_14d",
+      "peak_demand_MW_rolling_max_14d",
+      "peak_demand_MW_rolling_mean_30d",
+      "peak_demand_MW_rolling_std_30d",
+      "peak_demand_MW_rolling_min_30d",
+      "peak_demand_MW_rolling_max_30d",
+      "peak_demand_MW_change_1d_pct",
+      "peak_demand_MW_change_7d_pct",
+      "imd_rainfall_3d_mm_spatial_median",
+      "imd_wet_days_3d_spatial_median",
+      "imd_rainfall_7d_mm_spatial_median",
+      "imd_wet_days_7d_spatial_median",
+      "imd_rainfall_14d_mm_spatial_median",
+      "imd_wet_days_14d_spatial_median",
+      "imd_consecutive_wet_days_spatial_median",
+      "imd_temperature_mean_3d_c_spatial_median",
+      "imd_temperature_mean_7d_c_spatial_median",
+      "imd_temperature_change_3d_c_spatial_median",
+      "imd_rainfall_3d_mm_spatial_max",
+      "imd_wet_days_3d_spatial_max",
+      "imd_rainfall_7d_mm_spatial_max",
+      "imd_wet_days_7d_spatial_max",
+      "imd_rainfall_14d_mm_spatial_max",
+      "imd_wet_days_14d_spatial_max",
+      "imd_consecutive_wet_days_spatial_max",
+      "imd_temperature_mean_3d_c_spatial_max",
+      "imd_temperature_mean_7d_c_spatial_max",
+      "imd_temperature_change_3d_c_spatial_max",
+      "imd_location_count",
+      "open_meteo_rainfall_3d_mm_spatial_median",
+      "open_meteo_wet_days_3d_spatial_median",
+      "open_meteo_rainfall_7d_mm_spatial_median",
+      "open_meteo_wet_days_7d_spatial_median",
+      "open_meteo_rainfall_14d_mm_spatial_median",
+      "open_meteo_wet_days_14d_spatial_median",
+      "open_meteo_consecutive_wet_days_spatial_median",
+      "open_meteo_temperature_mean_3d_c_spatial_median",
+      "open_meteo_temperature_mean_7d_c_spatial_median",
+      "open_meteo_temperature_change_3d_c_spatial_median",
+      "open_meteo_humidity_mean_7d_pct_spatial_median",
+      "open_meteo_wind_speed_mean_7d_spatial_median",
+      "open_meteo_wind_speed_max_7d_spatial_median",
+      "open_meteo_pressure_mean_7d_hpa_spatial_median",
+      "open_meteo_pressure_change_1d_hpa_spatial_median",
+      "open_meteo_rainfall_3d_mm_spatial_max",
+      "open_meteo_wet_days_3d_spatial_max",
+      "open_meteo_rainfall_7d_mm_spatial_max",
+      "open_meteo_wet_days_7d_spatial_max",
+      "open_meteo_rainfall_14d_mm_spatial_max",
+      "open_meteo_wet_days_14d_spatial_max",
+      "open_meteo_consecutive_wet_days_spatial_max",
+      "open_meteo_temperature_mean_3d_c_spatial_max",
+      "open_meteo_temperature_mean_7d_c_spatial_max",
+      "open_meteo_temperature_change_3d_c_spatial_max",
+      "open_meteo_humidity_mean_7d_pct_spatial_max",
+      "open_meteo_wind_speed_mean_7d_spatial_max",
+      "open_meteo_wind_speed_max_7d_spatial_max",
+      "open_meteo_pressure_mean_7d_hpa_spatial_max",
+      "open_meteo_pressure_change_1d_hpa_spatial_max",
+      "open_meteo_location_count"
+    ],
+    "train": {
+      "rows": 2658,
+      "start": "2013-01-02",
+      "end": "2021-02-13"
+    },
+    "validation": {
+      "rows": 570,
+      "start": "2021-02-14",
+      "end": "2022-09-30"
+    },
+    "test": {
+      "rows": 570,
+      "start": "2022-10-01",
+      "end": "2024-04-28"
+    }
+  },
+  "targets": {
+    "energy_MU": {
+      "selected_model": "LightGBM",
+      "validation_model_results": {
+        "LinearRegression": {
+          "mae": 5.654990990771776,
+          "rmse": 7.7132145780703585,
+          "r2": 0.9237115404315981,
+          "mean_error_actual_minus_predicted": 0.8308995505388144,
+          "rows": 570
+        },
+        "ExtraTrees": {
+          "mae": 5.281415082846005,
+          "rmse": 7.337344161838115,
+          "r2": 0.9309655610685392,
+          "mean_error_actual_minus_predicted": 1.248979897660819,
+          "rows": 570
+        },
+        "XGBoost": {
+          "mae": 5.257872676764484,
+          "rmse": 7.211495298423801,
+          "r2": 0.9333133857732365,
+          "mean_error_actual_minus_predicted": 1.1916167301763863,
+          "rows": 570
+        },
+        "LightGBM": {
+          "mae": 5.2381224460429285,
+          "rmse": 7.152830412026553,
+          "r2": 0.9343939522675152,
+          "mean_error_actual_minus_predicted": 1.3862334292243044,
+          "rows": 570
+        }
+      },
+      "validation_baselines": {
+        "persistence": {
+          "mae": 6.376842105263158,
+          "rmse": 8.69415209791929,
+          "r2": 0.9030735099805053,
+          "mean_error_actual_minus_predicted": 0.12140350877192993,
+          "rows": 570
+        },
+        "trend_adjusted_persistence": {
+          "mae": 7.178733572281959,
+          "rmse": 9.803728139036386,
+          "r2": 0.8781575749906732,
+          "mean_error_actual_minus_predicted": 0.002150537634409473,
+          "rows": 558
+        }
+      },
+      "test_model_metrics": {
+        "mae": 5.754918794331198,
+        "rmse": 7.92840666219939,
+        "r2": 0.9518510391854004,
+        "mean_error_actual_minus_predicted": 1.7535623200645651
+      },
+      "test_baselines": {
+        "persistence": {
+          "mae": 6.998596491228071,
+          "rmse": 9.57082188628267,
+          "r2": 0.9298361274789231,
+          "mean_error_actual_minus_predicted": 0.1512280701754386,
+          "rows": 570
+        },
+        "trend_adjusted_persistence": {
+          "mae": 7.982745443856555,
+          "rmse": 10.840252007681604,
+          "r2": 0.9098405384761926,
+          "mean_error_actual_minus_predicted": 0.05376249265138109,
+          "rows": 567
+        }
+      },
+      "model_path": "F:\\powergrid-ai\\ml\\models\\demand_change\\energy_MU_lightgbm_delta.joblib"
+    },
+    "peak_demand_MW": {
+      "selected_model": "XGBoost",
+      "validation_model_results": {
+        "LinearRegression": {
+          "mae": 278.1322413785456,
+          "rmse": 373.99000983340596,
+          "r2": 0.8934797189249585,
+          "mean_error_actual_minus_predicted": 4.475467176891994,
+          "rows": 570
+        },
+        "ExtraTrees": {
+          "mae": 263.58233382066277,
+          "rmse": 363.0224943667849,
+          "r2": 0.8996356735897779,
+          "mean_error_actual_minus_predicted": 44.71376267056531,
+          "rows": 570
+        },
+        "XGBoost": {
+          "mae": 256.1896087680992,
+          "rmse": 355.24620113429575,
+          "r2": 0.9038894226760628,
+          "mean_error_actual_minus_predicted": 28.533952030905507,
+          "rows": 570
+        },
+        "LightGBM": {
+          "mae": 264.41801244816435,
+          "rmse": 360.82128059552423,
+          "r2": 0.9008491165490925,
+          "mean_error_actual_minus_predicted": 19.145596435445373,
+          "rows": 570
+        }
+      },
+      "validation_baselines": {
+        "persistence": {
+          "mae": 306.16491228070174,
+          "rmse": 416.88642906293086,
+          "r2": 0.8676427251975051,
+          "mean_error_actual_minus_predicted": 6.670175438596491,
+          "rows": 570
+        },
+        "trend_adjusted_persistence": {
+          "mae": 343.2189366786141,
+          "rmse": 465.020017244069,
+          "r2": 0.8371090879817676,
+          "mean_error_actual_minus_predicted": 1.8796296296296569,
+          "rows": 558
+        }
+      },
+      "test_model_metrics": {
+        "mae": 287.72454831615875,
+        "rmse": 398.92761513380356,
+        "r2": 0.9326945890935379,
+        "mean_error_actual_minus_predicted": 46.89477530608052
+      },
+      "test_baselines": {
+        "persistence": {
+          "mae": 354.7719298245614,
+          "rmse": 483.8612567559772,
+          "r2": 0.9009844334337703,
+          "mean_error_actual_minus_predicted": 6.84561403508772,
+          "rows": 570
+        },
+        "trend_adjusted_persistence": {
+          "mae": 403.28630217519105,
+          "rmse": 548.3006434703698,
+          "r2": 0.8731312411800807,
+          "mean_error_actual_minus_predicted": 0.9611992945326214,
+          "rows": 567
+        }
+      },
+      "model_path": "F:\\powergrid-ai\\ml\\models\\demand_change\\peak_demand_MW_xgboost_delta.joblib"
+    }
+  },
+  "outputs": {
+    "predictions": "F:\\powergrid-ai\\data\\processed\\demand_change\\demand_change_test_predictions.csv",
+    "summary": "F:\\powergrid-ai\\reports\\electricity\\demand_change\\demand_change_summary.csv",
+    "report": "F:\\powergrid-ai\\reports\\electricity\\demand_change\\demand_change_comparison.json"
+  }
+}

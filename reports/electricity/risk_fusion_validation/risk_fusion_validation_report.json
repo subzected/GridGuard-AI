@@ -1,0 +1,83 @@
+{
+    "project": "GridGuard AI",
+    "module": "risk_fusion_validation",
+    "validation_scope": "Historical statistical consistency against actual demand thresholds. This is not validation against physical grid-overload labels.",
+    "threshold_source": "F:\\powergrid-ai\\reports\\electricity\\demand_pressure\\demand_pressure_thresholds.json",
+    "reference_thresholds": {
+        "energy_p90_MU": 164.3,
+        "energy_p95_MU": 172.3,
+        "peak_p90_MW": 8304.0,
+        "peak_p95_MW": 8596.0
+    },
+    "rows": 4136,
+    "valid_energy_rows": 3894,
+    "valid_peak_rows": 3894,
+    "peak_p90_reference": {
+        "demand_only": {
+            "observations": 3894,
+            "true_positive": 783,
+            "true_negative": 2993,
+            "false_positive": 118,
+            "false_negative": 0,
+            "precision": 0.8690344062153164,
+            "recall": 1.0,
+            "specificity": 0.9620700739312118,
+            "f1": 0.9299287410926366,
+            "false_alarm_rate": 0.03792992606878817,
+            "alert_rate": 0.23138161273754493,
+            "actual_positive_rate": 0.20107858243451462
+        },
+        "combined": {
+            "observations": 3894,
+            "true_positive": 783,
+            "true_negative": 2795,
+            "false_positive": 316,
+            "false_negative": 0,
+            "precision": 0.7124658780709736,
+            "recall": 1.0,
+            "specificity": 0.898424943747991,
+            "f1": 0.8320935175345378,
+            "false_alarm_rate": 0.101575056252009,
+            "alert_rate": 0.2822290703646636,
+            "actual_positive_rate": 0.20107858243451462
+        }
+    },
+    "energy_p90_reference": {
+        "demand_only": {
+            "observations": 3894,
+            "true_positive": 820,
+            "true_negative": 2993,
+            "false_positive": 81,
+            "false_negative": 0,
+            "precision": 0.9100998890122086,
+            "recall": 1.0,
+            "specificity": 0.9736499674690956,
+            "f1": 0.9529343404997095,
+            "false_alarm_rate": 0.026350032530904358,
+            "alert_rate": 0.23138161273754493,
+            "actual_positive_rate": 0.2105803800719055
+        },
+        "combined": {
+            "observations": 3894,
+            "true_positive": 820,
+            "true_negative": 2795,
+            "false_positive": 279,
+            "false_negative": 0,
+            "precision": 0.7461328480436761,
+            "recall": 1.0,
+            "specificity": 0.9092387768379961,
+            "f1": 0.8546117769671705,
+            "false_alarm_rate": 0.0907612231620039,
+            "alert_rate": 0.2822290703646636,
+            "actual_positive_rate": 0.2105803800719055
+        }
+    },
+    "critical_note": "The P90/P95 demand thresholds are statistical high-demand references. They are not capacity limits, reserve margins, or official grid-stress labels.",
+    "interpretation_limits": [
+        "Demand-only labels are derived from actual demand and are not independent ground truth.",
+        "Combined labels include demand pressure, so comparison with demand thresholds is a consistency check, not an independent model validation.",
+        "Weather association is observational and does not establish causality.",
+        "No physical grid capacity, reserve margin, outage, or operator stress labels are available.",
+        "High combined-risk alert rates should be reviewed for false alarms before operational use."
+    ]
+}

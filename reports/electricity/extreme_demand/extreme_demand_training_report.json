@@ -1,0 +1,571 @@
+{
+  "dataset": "F:\\powergrid-ai\\data\\processed\\west_bengal_demand_weather_dataset.csv",
+  "target_definition": "Predict next-day demand change and reconstruct demand level.",
+  "split": {
+    "train": {
+      "rows": 2658,
+      "start": "2013-01-02",
+      "end": "2021-02-13"
+    },
+    "validation": {
+      "rows": 570,
+      "start": "2021-02-14",
+      "end": "2022-09-30"
+    },
+    "test": {
+      "rows": 570,
+      "start": "2022-10-01",
+      "end": "2024-04-28"
+    }
+  },
+  "feature_count": 97,
+  "feature_columns": [
+    "day_of_week",
+    "day_of_month",
+    "month",
+    "day_of_year",
+    "week_of_year",
+    "is_weekend",
+    "day_of_year_sin",
+    "day_of_year_cos",
+    "energy_MU_lag_1d",
+    "energy_MU_lag_7d",
+    "energy_MU_lag_14d",
+    "energy_MU_lag_28d",
+    "energy_MU_rolling_mean_7d",
+    "energy_MU_rolling_std_7d",
+    "energy_MU_rolling_min_7d",
+    "energy_MU_rolling_max_7d",
+    "energy_MU_rolling_mean_14d",
+    "energy_MU_rolling_std_14d",
+    "energy_MU_rolling_min_14d",
+    "energy_MU_rolling_max_14d",
+    "energy_MU_rolling_mean_30d",
+    "energy_MU_rolling_std_30d",
+    "energy_MU_rolling_min_30d",
+    "energy_MU_rolling_max_30d",
+    "energy_MU_change_1d_pct",
+    "energy_MU_change_7d_pct",
+    "peak_demand_MW_lag_1d",
+    "peak_demand_MW_lag_7d",
+    "peak_demand_MW_lag_14d",
+    "peak_demand_MW_lag_28d",
+    "peak_demand_MW_rolling_mean_7d",
+    "peak_demand_MW_rolling_std_7d",
+    "peak_demand_MW_rolling_min_7d",
+    "peak_demand_MW_rolling_max_7d",
+    "peak_demand_MW_rolling_mean_14d",
+    "peak_demand_MW_rolling_std_14d",
+    "peak_demand_MW_rolling_min_14d",
+    "peak_demand_MW_rolling_max_14d",
+    "peak_demand_MW_rolling_mean_30d",
+    "peak_demand_MW_rolling_std_30d",
+    "peak_demand_MW_rolling_min_30d",
+    "peak_demand_MW_rolling_max_30d",
+    "peak_demand_MW_change_1d_pct",
+    "peak_demand_MW_change_7d_pct",
+    "imd_rainfall_3d_mm_spatial_median",
+    "imd_wet_days_3d_spatial_median",
+    "imd_rainfall_7d_mm_spatial_median",
+    "imd_wet_days_7d_spatial_median",
+    "imd_rainfall_14d_mm_spatial_median",
+    "imd_wet_days_14d_spatial_median",
+    "imd_consecutive_wet_days_spatial_median",
+    "imd_temperature_mean_3d_c_spatial_median",
+    "imd_temperature_mean_7d_c_spatial_median",
+    "imd_temperature_change_3d_c_spatial_median",
+    "imd_rainfall_3d_mm_spatial_max",
+    "imd_wet_days_3d_spatial_max",
+    "imd_rainfall_7d_mm_spatial_max",
+    "imd_wet_days_7d_spatial_max",
+    "imd_rainfall_14d_mm_spatial_max",
+    "imd_wet_days_14d_spatial_max",
+    "imd_consecutive_wet_days_spatial_max",
+    "imd_temperature_mean_3d_c_spatial_max",
+    "imd_temperature_mean_7d_c_spatial_max",
+    "imd_temperature_change_3d_c_spatial_max",
+    "imd_location_count",
+    "open_meteo_rainfall_3d_mm_spatial_median",
+    "open_meteo_wet_days_3d_spatial_median",
+    "open_meteo_rainfall_7d_mm_spatial_median",
+    "open_meteo_wet_days_7d_spatial_median",
+    "open_meteo_rainfall_14d_mm_spatial_median",
+    "open_meteo_wet_days_14d_spatial_median",
+    "open_meteo_consecutive_wet_days_spatial_median",
+    "open_meteo_temperature_mean_3d_c_spatial_median",
+    "open_meteo_temperature_mean_7d_c_spatial_median",
+    "open_meteo_temperature_change_3d_c_spatial_median",
+    "open_meteo_humidity_mean_7d_pct_spatial_median",
+    "open_meteo_wind_speed_mean_7d_spatial_median",
+    "open_meteo_wind_speed_max_7d_spatial_median",
+    "open_meteo_pressure_mean_7d_hpa_spatial_median",
+    "open_meteo_pressure_change_1d_hpa_spatial_median",
+    "open_meteo_rainfall_3d_mm_spatial_max",
+    "open_meteo_wet_days_3d_spatial_max",
+    "open_meteo_rainfall_7d_mm_spatial_max",
+    "open_meteo_wet_days_7d_spatial_max",
+    "open_meteo_rainfall_14d_mm_spatial_max",
+    "open_meteo_wet_days_14d_spatial_max",
+    "open_meteo_consecutive_wet_days_spatial_max",
+    "open_meteo_temperature_mean_3d_c_spatial_max",
+    "open_meteo_temperature_mean_7d_c_spatial_max",
+    "open_meteo_temperature_change_3d_c_spatial_max",
+    "open_meteo_humidity_mean_7d_pct_spatial_max",
+    "open_meteo_wind_speed_mean_7d_spatial_max",
+    "open_meteo_wind_speed_max_7d_spatial_max",
+    "open_meteo_pressure_mean_7d_hpa_spatial_max",
+    "open_meteo_pressure_change_1d_hpa_spatial_max",
+    "open_meteo_locations_with_any_weather_feature",
+    "open_meteo_location_count"
+  ],
+  "extreme_quantile": 0.8,
+  "targets": {
+    "energy_MU": {
+      "target": "energy_MU",
+      "selected_model": "ExtraTrees_weighted_delta",
+      "extreme_definition": {
+        "quantile": 0.8,
+        "threshold_source": "training actual demand only",
+        "threshold": 152.7,
+        "validation_high_demand_rows": 345,
+        "test_high_demand_rows": 326,
+        "note": "Actual demand defines retrospective high-demand evaluation groups. It is not available at forecast time."
+      },
+      "validation_baselines": {
+        "persistence": {
+          "overall": {
+            "n": 570,
+            "mae": 6.376842105263158,
+            "rmse": 8.69415209791929,
+            "r2": 0.9030735099805053,
+            "mean_error": -0.12140350877192993
+          },
+          "high_demand": {
+            "n": 345,
+            "mae": 6.695652173913044,
+            "rmse": 8.811833282416403,
+            "r2": 0.531079691157113,
+            "mean_error": -1.1698550724637682
+          }
+        },
+        "trend_adjusted_persistence": {
+          "overall": {
+            "n": 558,
+            "mae": 7.178733572281959,
+            "rmse": 9.803728139036386,
+            "r2": 0.8781575749906732,
+            "mean_error": -0.002150537634409473
+          },
+          "high_demand": {
+            "n": 336,
+            "mae": 7.632341269841269,
+            "rmse": 10.086466947161949,
+            "r2": 0.3805811072064419,
+            "mean_error": -0.5882936507936519
+          }
+        }
+      },
+      "validation_candidates": {
+        "Ridge_delta": {
+          "validation": {
+            "overall": {
+              "n": 570,
+              "mae": 5.66310146429868,
+              "rmse": 7.716819085443193,
+              "r2": 0.9236402221598221,
+              "mean_error": -0.8570653142540298
+            },
+            "high_demand": {
+              "n": 345,
+              "mae": 5.9171936229378925,
+              "rmse": 7.432775213793107,
+              "r2": 0.6663673873881015,
+              "mean_error": -2.4699248190473346
+            }
+          },
+          "selection_score": 6.48350376936776,
+          "eligible_under_overall_error_guardrail": true
+        },
+        "ExtraTrees_weighted_delta": {
+          "validation": {
+            "overall": {
+              "n": 570,
+              "mae": 5.144602600837116,
+              "rmse": 7.2222475189652835,
+              "r2": 0.9331143802430435,
+              "mean_error": -0.8786199615602572
+            },
+            "high_demand": {
+              "n": 345,
+              "mae": 5.645341976777259,
+              "rmse": 7.381540272190085,
+              "r2": 0.6709510678393303,
+              "mean_error": -2.5496479448110887
+            }
+          },
+          "selection_score": 6.159802236860971,
+          "eligible_under_overall_error_guardrail": true
+        },
+        "HistGradientBoosting_weighted_delta": {
+          "validation": {
+            "overall": {
+              "n": 570,
+              "mae": 5.159788582705973,
+              "rmse": 7.122224962353575,
+              "r2": 0.9349541799763471,
+              "mean_error": -0.912415966253925
+            },
+            "high_demand": {
+              "n": 345,
+              "mae": 5.749191710699291,
+              "rmse": 7.191107365896926,
+              "r2": 0.6877100237371591,
+              "mean_error": -2.641572419090492
+            }
+          },
+          "selection_score": 6.265170568969888,
+          "eligible_under_overall_error_guardrail": true
+        },
+        "GradientBoosting_quantile_delta_q75": {
+          "validation": {
+            "overall": {
+              "n": 570,
+              "mae": 5.808826919181451,
+              "rmse": 8.521373237584818,
+              "r2": 0.9068876699488426,
+              "mean_error": 4.137711384039046
+            },
+            "high_demand": {
+              "n": 345,
+              "mae": 5.723061770467195,
+              "rmse": 7.861474418118102,
+              "r2": 0.6267717488855015,
+              "mean_error": 3.4983772372198847
+            }
+          },
+          "selection_score": 6.30394446238534,
+          "eligible_under_overall_error_guardrail": true
+        },
+        "XGBoost_weighted_delta": {
+          "validation": {
+            "overall": {
+              "n": 570,
+              "mae": 5.43771122802294,
+              "rmse": 7.425542160122332,
+              "r2": 0.9292959395898662,
+              "mean_error": -1.2905511389834512
+            },
+            "high_demand": {
+              "n": 345,
+              "mae": 6.200794742045573,
+              "rmse": 7.671487416421097,
+              "r2": 0.6445932656225288,
+              "mean_error": -3.238484946535495
+            }
+          },
+          "selection_score": 6.744565864847867,
+          "eligible_under_overall_error_guardrail": true
+        },
+        "LightGBM_weighted_delta": {
+          "validation": {
+            "overall": {
+              "n": 570,
+              "mae": 5.185998025588666,
+              "rmse": 7.103214350084798,
+              "r2": 0.9353009565972005,
+              "mean_error": -0.9819209806464246
+            },
+            "high_demand": {
+              "n": 345,
+              "mae": 5.74835350668907,
+              "rmse": 7.17436061805325,
+              "r2": 0.6891628602915543,
+              "mean_error": -2.690785159167943
+            }
+          },
+          "selection_score": 6.266953309247937,
+          "eligible_under_overall_error_guardrail": true
+        }
+      },
+      "test_baselines": {
+        "persistence": {
+          "overall": {
+            "n": 570,
+            "mae": 6.998596491228071,
+            "rmse": 9.57082188628267,
+            "r2": 0.9298361274789231,
+            "mean_error": -0.1512280701754386
+          },
+          "high_demand": {
+            "n": 326,
+            "mae": 8.461963190184049,
+            "rmse": 11.008320890778748,
+            "r2": 0.827758542945479,
+            "mean_error": -0.8883435582822087
+          }
+        },
+        "trend_adjusted_persistence": {
+          "overall": {
+            "n": 567,
+            "mae": 7.982745443856555,
+            "rmse": 10.840252007681604,
+            "r2": 0.9098405384761926,
+            "mean_error": -0.05376249265138109
+          },
+          "high_demand": {
+            "n": 325,
+            "mae": 9.588564102564101,
+            "rmse": 12.46495590208909,
+            "r2": 0.7798307575347418,
+            "mean_error": -0.2698974358974359
+          }
+        }
+      },
+      "test_selected_model": {
+        "overall": {
+          "n": 570,
+          "mae": 5.973521248235708,
+          "rmse": 8.342286727878822,
+          "r2": 0.9466928691620106,
+          "mean_error": -1.1681362624479144
+        },
+        "high_demand": {
+          "n": 326,
+          "mae": 7.614618541388482,
+          "rmse": 9.662559120335091,
+          "r2": 0.867297269924993,
+          "mean_error": -2.431796351750815
+        }
+      },
+      "model_bundle": "F:\\powergrid-ai\\ml\\models\\extreme_demand\\energy_MU_extratrees_weighted_delta_extreme_delta.joblib",
+      "overall_error_guardrail_met": true
+    },
+    "peak_demand_MW": {
+      "target": "peak_demand_MW",
+      "selected_model": "GradientBoosting_quantile_delta_q75",
+      "extreme_definition": {
+        "quantile": 0.8,
+        "threshold_source": "training actual demand only",
+        "threshold": 7860.6,
+        "validation_high_demand_rows": 329,
+        "test_high_demand_rows": 281,
+        "note": "Actual demand defines retrospective high-demand evaluation groups. It is not available at forecast time."
+      },
+      "validation_baselines": {
+        "persistence": {
+          "overall": {
+            "n": 570,
+            "mae": 306.16491228070174,
+            "rmse": 416.88642906293086,
+            "r2": 0.8676427251975051,
+            "mean_error": -6.670175438596491
+          },
+          "high_demand": {
+            "n": 329,
+            "mae": 282.6322188449848,
+            "rmse": 372.1697409911538,
+            "r2": 0.43546212828773556,
+            "mean_error": -59.75075987841945
+          }
+        },
+        "trend_adjusted_persistence": {
+          "overall": {
+            "n": 558,
+            "mae": 343.2189366786141,
+            "rmse": 465.020017244069,
+            "r2": 0.8371090879817676,
+            "mean_error": -1.8796296296296569
+          },
+          "high_demand": {
+            "n": 318,
+            "mae": 322.5256813417191,
+            "rmse": 419.9694317891679,
+            "r2": 0.2619293681894861,
+            "mean_error": -35.45335429769395
+          }
+        }
+      },
+      "validation_candidates": {
+        "Ridge_delta": {
+          "validation": {
+            "overall": {
+              "n": 570,
+              "mae": 277.7589376118766,
+              "rmse": 373.6179602688847,
+              "r2": 0.8936915487094191,
+              "mean_error": -3.860596460390505
+            },
+            "high_demand": {
+              "n": 329,
+              "mae": 273.1561269741133,
+              "rmse": 345.82375401740455,
+              "r2": 0.5125606309314491,
+              "mean_error": -105.63588074899172
+            }
+          },
+          "selection_score": 300.93202073530097,
+          "eligible_under_overall_error_guardrail": true
+        },
+        "ExtraTrees_weighted_delta": {
+          "validation": {
+            "overall": {
+              "n": 570,
+              "mae": 261.2242900649255,
+              "rmse": 363.45480090995903,
+              "r2": 0.8993964928770324,
+              "mean_error": -32.449097966887535
+            },
+            "high_demand": {
+              "n": 329,
+              "mae": 262.3352894880465,
+              "rmse": 333.39278939999076,
+              "r2": 0.5469737507694181,
+              "mean_error": -122.63234491647192
+            }
+          },
+          "selection_score": 288.45771849453905,
+          "eligible_under_overall_error_guardrail": true
+        },
+        "HistGradientBoosting_weighted_delta": {
+          "validation": {
+            "overall": {
+              "n": 570,
+              "mae": 265.12357476980816,
+              "rmse": 365.41628092756594,
+              "r2": 0.8983076958932871,
+              "mean_error": -7.2665118118910135
+            },
+            "high_demand": {
+              "n": 329,
+              "mae": 262.96875555414687,
+              "rmse": 335.84108745932497,
+              "r2": 0.5402956469481277,
+              "mean_error": -101.92330701639688
+            }
+          },
+          "selection_score": 289.4811130311277,
+          "eligible_under_overall_error_guardrail": true
+        },
+        "GradientBoosting_quantile_delta_q75": {
+          "validation": {
+            "overall": {
+              "n": 570,
+              "mae": 289.14169695135683,
+              "rmse": 411.2998328603505,
+              "r2": 0.8711663333410271,
+              "mean_error": 187.64269023680097
+            },
+            "high_demand": {
+              "n": 329,
+              "mae": 258.18747182867236,
+              "rmse": 329.8971843318172,
+              "r2": 0.5564238583840457,
+              "mean_error": 121.9113517866361
+            }
+          },
+          "selection_score": 287.10164152380804,
+          "eligible_under_overall_error_guardrail": true
+        },
+        "XGBoost_weighted_delta": {
+          "validation": {
+            "overall": {
+              "n": 570,
+              "mae": 269.2367193084014,
+              "rmse": 366.17066221498493,
+              "r2": 0.8978873864437167,
+              "mean_error": -21.592130953387212
+            },
+            "high_demand": {
+              "n": 329,
+              "mae": 273.36282520163746,
+              "rmse": 342.9820110142398,
+              "r2": 0.5205386034122079,
+              "mean_error": -123.53568523415679
+            }
+          },
+          "selection_score": 300.2864971324776,
+          "eligible_under_overall_error_guardrail": true
+        },
+        "LightGBM_weighted_delta": {
+          "validation": {
+            "overall": {
+              "n": 570,
+              "mae": 270.9229746336242,
+              "rmse": 371.3152194435666,
+              "r2": 0.894997944222669,
+              "mean_error": -15.947289689119588
+            },
+            "high_demand": {
+              "n": 329,
+              "mae": 270.5356501526474,
+              "rmse": 342.21986541257127,
+              "r2": 0.5226670730160303,
+              "mean_error": -120.87095581352015
+            }
+          },
+          "selection_score": 297.6279476160098,
+          "eligible_under_overall_error_guardrail": true
+        }
+      },
+      "test_baselines": {
+        "persistence": {
+          "overall": {
+            "n": 570,
+            "mae": 354.7719298245614,
+            "rmse": 483.8612567559772,
+            "r2": 0.9009844334337703,
+            "mean_error": -6.84561403508772
+          },
+          "high_demand": {
+            "n": 281,
+            "mae": 382.05693950177937,
+            "rmse": 518.5903902720935,
+            "r2": 0.7775405558498494,
+            "mean_error": -64.77580071174377
+          }
+        },
+        "trend_adjusted_persistence": {
+          "overall": {
+            "n": 567,
+            "mae": 403.28630217519105,
+            "rmse": 548.3006434703698,
+            "r2": 0.8731312411800807,
+            "mean_error": -0.9611992945326214
+          },
+          "high_demand": {
+            "n": 280,
+            "mae": 434.2672619047618,
+            "rmse": 585.0326033005367,
+            "r2": 0.7175928573449173,
+            "mean_error": -32.293452380952374
+          }
+        }
+      },
+      "test_selected_model": {
+        "overall": {
+          "n": 570,
+          "mae": 314.2933641758911,
+          "rmse": 457.4178872914628,
+          "r2": 0.9115112488472594,
+          "mean_error": 171.63691732850893
+        },
+        "high_demand": {
+          "n": 281,
+          "mae": 344.96898344812473,
+          "rmse": 487.3463232541424,
+          "r2": 0.803538567713291,
+          "mean_error": 117.75193774753313
+        }
+      },
+      "model_bundle": "F:\\powergrid-ai\\ml\\models\\extreme_demand\\peak_demand_MW_gradientboosting_quantile_delta_q75_extreme_delta.joblib",
+      "overall_error_guardrail_met": true
+    }
+  },
+  "caveats": [
+    "High-demand thresholds are calculated from training actual demand only.",
+    "Validation and test high-demand masks use actual demand for retrospective evaluation.",
+    "Actual demand is not available at inference time to decide whether a day is extreme.",
+    "Test metrics must not be used for further model selection or tuning.",
+    "Weather predictors are historical prior-day observations, not archived operational forecasts."
+  ]
+}

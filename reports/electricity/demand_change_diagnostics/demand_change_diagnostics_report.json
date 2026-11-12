@@ -1,0 +1,90 @@
+{
+  "input_file": "F:\\powergrid-ai\\data\\processed\\demand_change\\demand_change_test_predictions.csv",
+  "evaluation_policy": "All available methods are evaluated on the same non-null rows for each target. Metrics are computed on reconstructed demand levels.",
+  "targets": {
+    "energy_MU": {
+      "actual_column": "energy_MU_actual",
+      "model_prediction_column": "energy_MU_predicted",
+      "persistence_column": "energy_MU_persistence",
+      "trend_adjusted_column": "energy_MU_trend_adjusted_persistence",
+      "test_date_range": {
+        "start": "2022-10-01",
+        "end": "2024-04-28"
+      },
+      "metrics_same_rows": {
+        "demand_change_model": {
+          "n": 567,
+          "mae": 5.778131599338354,
+          "rmse": 7.948525650798234,
+          "r2": 0.9515263511614402,
+          "mean_error": -1.7581133541763982,
+          "mean_absolute_percentage_error": 3.295049275459033
+        },
+        "persistence": {
+          "n": 567,
+          "mae": 7.026807760141093,
+          "rmse": 9.595326978463692,
+          "r2": 0.9293597691925113,
+          "mean_error": -0.15026455026455027,
+          "mean_absolute_percentage_error": 4.147031204677652
+        },
+        "trend_adjusted_persistence": {
+          "n": 567,
+          "mae": 7.982745443856553,
+          "rmse": 10.840252007681604,
+          "r2": 0.9098405384761926,
+          "mean_error": -0.0537624926513845,
+          "mean_absolute_percentage_error": 4.720627987331868
+        },
+        "improvement_vs_persistence_percent": 17.770176777650544,
+        "improvement_vs_trend_adjusted_percent": 27.61723845540946
+      },
+      "demand_range_rows": 15,
+      "monthly_rows": 57,
+      "worst_20_days_csv": "tables/energy_MU_worst_20_days.csv",
+      "feature_importance_available": true
+    },
+    "peak_demand_MW": {
+      "actual_column": "peak_demand_MW_actual",
+      "model_prediction_column": "peak_demand_MW_predicted",
+      "persistence_column": "peak_demand_MW_persistence",
+      "trend_adjusted_column": "peak_demand_MW_trend_adjusted_persistence",
+      "test_date_range": {
+        "start": "2022-10-01",
+        "end": "2024-04-28"
+      },
+      "metrics_same_rows": {
+        "demand_change_model": {
+          "n": 567,
+          "mae": 287.56094186241876,
+          "rmse": 399.3062943021749,
+          "r2": 0.9327132592854528,
+          "mean_error": -45.45693724911256,
+          "mean_absolute_percentage_error": 3.4742378988517832
+        },
+        "persistence": {
+          "n": 567,
+          "mae": 355.320987654321,
+          "rmse": 484.7518883904012,
+          "r2": 0.9008355062337565,
+          "mean_error": -5.553791887125221,
+          "mean_absolute_percentage_error": 4.449603395583584
+        },
+        "trend_adjusted_persistence": {
+          "n": 567,
+          "mae": 403.28630217519105,
+          "rmse": 548.3006434703698,
+          "r2": 0.8731312411800807,
+          "mean_error": -0.9611992945326214,
+          "mean_absolute_percentage_error": 5.046837268399113
+        },
+        "improvement_vs_persistence_percent": 19.070093843661034,
+        "improvement_vs_trend_adjusted_percent": 28.69558417644946
+      },
+      "demand_range_rows": 15,
+      "monthly_rows": 57,
+      "worst_20_days_csv": "tables/peak_demand_MW_worst_20_days.csv",
+      "feature_importance_available": true
+    }
+  }
+}
